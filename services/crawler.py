@@ -5,7 +5,7 @@ import html
 from bs4 import BeautifulSoup
 import os
 import sys
-from db import crud
+#from db import crud
 
 
 def load_sources() -> tuple[List[str], List[str]]:
@@ -15,7 +15,7 @@ def load_sources() -> tuple[List[str], List[str]]:
         rss_feeds (list): List of RSS feed URLs.
         subreddits (list): List of subreddit names.
     """
-    sources = crud.get_sources()
+    sources = []#crud.get_sources()
     rss_feeds = [s['url'] for s in sources if s['type'] == 'rss']
     subreddits = [s['name'] for s in sources if s['type'] == 'reddit']
     return rss_feeds, subreddits
