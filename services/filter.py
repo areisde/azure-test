@@ -1,16 +1,10 @@
-import os
-import sys
-
-dir_path = os.path.dirname(os.path.realpath(__file__))
-sys.path.insert(0, dir_path)
-
-from db.models import Article
-from services.embeddings import embed_text
-from db.crud import get_similar_articles
-from db.crud import upload_article
+from db import models
+from services import embeddings
+from db import crud
+from db import crud
 import numpy as np
 
-def filter_article(article: Article) -> bool:
+def filter_article(article: models.Article) -> bool:
     """
     Given an article embed it and perform a database search for closest articles
     Args:
@@ -24,11 +18,11 @@ def filter_article(article: Article) -> bool:
 
     if filtered:
         # If the article is relevant, upload it to the database
-        upload_article(article)
+        crud.upload_article(article)
 
     return filtered
 
-def cosine_similarity_filter(article: Article) -> bool:
+def cosine_similarity_filter(article: models.Article) -> bool:
     """
     Filters an article based on cosine similarity with existing articles.
     Args:
@@ -37,8 +31,8 @@ def cosine_similarity_filter(article: Article) -> bool:
         bool: True if the article is relevant, False otherwise.
     """
     # Embed input article and fetch database
-    article_embedding = embed_text(article.title)
-    similar_articles = get_similar_articles(article_embedding)
+    article_embedding = embeddings.embed_text(article.title)
+    similar_articles = crud.get_similar_articles(article_embedding)
     
     # Split articles into relevant and irrelevant based on the similarity results
     relevant_articles = [article[1] for article in similar_articles if article[2]['relevant'] == True]
@@ -58,7 +52,7 @@ def cosine_similarity_filter(article: Article) -> bool:
     
     return False
 
-def keyword_filter(article: Article) -> bool:
+def keyword_filter(article: models.Article) -> bool:
     """
     Filters an article based on the presence of keywords in its title or body.
     Args:

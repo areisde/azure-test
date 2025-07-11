@@ -1,12 +1,7 @@
 import os
 from supabase import create_client
-import sys
 import vecs
-
-dir_path = os.path.dirname(os.path.realpath(__file__))
-sys.path.insert(0, dir_path)
-
-from db.models import Filter
+from . import models
 
 
 def get_sources():
@@ -30,7 +25,7 @@ def get_sources():
     return sources
 
 
-def add_filter(filter_obj: Filter) -> bool:
+def add_filter(filter_obj: models.Filter) -> bool:
     """
     Insert a filter into the filters table.
     Args:
