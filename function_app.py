@@ -1,5 +1,5 @@
 import azure.functions as func
-#from api import crawl
+from api import crawl
 #from api import ingest
 #from api import retrieve
 import json
@@ -9,10 +9,9 @@ app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 @app.route(route="crawl", methods=["GET"])
 def crawl_and_process(req: func.HttpRequest) -> func.HttpResponse:
     try:
-        #result = crawl.crawl_and_process()
+        result = crawl.crawl_and_process()
         return func.HttpResponse(
-        #    str(result),
-            "Hello Crawler !",
+            str(result),
             status_code=200,
             mimetype="application/json"
         )
