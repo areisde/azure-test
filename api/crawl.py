@@ -1,4 +1,4 @@
-from services import crawler
+#from services import crawler
 #from . import ingest
 
 
@@ -9,7 +9,7 @@ def crawl_and_process():
     Returns:
         dict: JSON array of processed relevant articles.
     """
-    articles = crawler.crawl_all_sources()
+    #articles = crawler.crawl_all_sources()
     #result = ingest.process_articles(articles)
     return {
     #    "processed": result
