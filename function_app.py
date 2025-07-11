@@ -3,7 +3,7 @@ from api import crawl
 #from api import ingest
 #from api import retrieve
 import json
-import feedparser
+#import feedparser
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
