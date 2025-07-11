@@ -1,8 +1,8 @@
-import feedparser
+#import feedparser
 from datetime import datetime
 from typing import List, Dict
 import html
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup
 import os
 import sys
 #from db import crud
@@ -20,14 +20,14 @@ def load_sources() -> tuple[List[str], List[str]]:
     subreddits = [s['name'] for s in sources if s['type'] == 'reddit']
     return rss_feeds, subreddits
 
-
+"""
 def fetch_rss_articles(rss_urls: List[str]) -> List[Dict]:
-    """Fetches articles from a list of RSS feed URLs.
+    Fetches articles from a list of RSS feed URLs.
     Args:
         rss_urls (List[str]): List of RSS feed URLs.
     Returns:
         List[Dict]: List of articles with keys: id, title, body, published_at
-    """
+
     articles = []
     for url in rss_urls:
         source = url.split('.')[1]  # Extract source from URL
@@ -53,11 +53,11 @@ def fetch_reddit_articles(subreddits: List[str]) -> List[Dict]:
 
 
 def crawl_all_sources() -> List[Dict]:
-    """
+    
     Main crawler function that fetches articles from all sources specified in the database.
     Returns:
         List[Dict]: Combined list of articles from RSS feeds and Reddit.
-    """
+    
     rss_feeds, subreddits = load_sources()
     articles = []
     
@@ -69,3 +69,4 @@ def crawl_all_sources() -> List[Dict]:
 
 if __name__ == '__main__':
     articles = crawl_all_sources()
+"""

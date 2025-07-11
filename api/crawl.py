@@ -1,4 +1,4 @@
-#from services import crawler
+from services import crawler
 #from . import ingest
 
 
