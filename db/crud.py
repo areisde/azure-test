@@ -1,7 +1,12 @@
 import os
 from supabase import create_client
-from db.models import Filter
+import sys
 import vecs
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+sys.path.insert(0, dir_path)
+
+from db.models import Filter
 
 
 def get_sources():

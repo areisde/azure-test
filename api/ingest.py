@@ -1,4 +1,10 @@
 from typing import List
+import os
+import sys
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+sys.path.insert(0, dir_path)
+
 from db.crud import add_filter, get_similar_articles
 from services.embeddings import embed_text
 from services.filter import filter_article

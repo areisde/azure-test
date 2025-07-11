@@ -1,9 +1,16 @@
 import feedparser
 from datetime import datetime
 from typing import List, Dict
-from db.crud import get_sources
 import html
 from bs4 import BeautifulSoup
+import os
+import sys
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+sys.path.insert(0, dir_path)
+
+from db.crud import get_sources
+
 
 def load_sources() -> tuple[List[str], List[str]]:
     """

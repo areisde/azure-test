@@ -1,3 +1,9 @@
+import os
+import sys
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+sys.path.insert(0, dir_path)
+
 from db.crud import get_articles
 
 def retrieve_events():
