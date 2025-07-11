@@ -6,9 +6,7 @@ from api.retrieve import retrieve_events
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
-
-@app.function_name(name="CrawlAndProcess")
-@app.route(route="api/crawl", methods=["GET"])
+@app.route(route="crawl", methods=["GET"])
 def crawl_and_process(req: func.HttpRequest) -> func.HttpResponse:
     try:
         result = crawl_and_process()
@@ -23,8 +21,7 @@ def crawl_and_process(req: func.HttpRequest) -> func.HttpResponse:
             status_code=500
         )
 
-@app.function_name(name="IngestArticles")
-@app.route(route="api/ingest", methods=["POST"])
+@app.route(route="ingest", methods=["POST"])
 def ingest_articles(req: func.HttpRequest) -> func.HttpResponse:
     try:
         articles = req.get_json()
@@ -48,8 +45,7 @@ def ingest_articles(req: func.HttpRequest) -> func.HttpResponse:
             mimetype="application/json"
         )
 
-@app.function_name(name="RetrieveArticles")
-@app.route(route="api/retrieve", methods=["GET"])
+@app.route(route="retrieve", methods=["GET"])
 def retrieve_articles(req: func.HttpRequest) -> func.HttpResponse:
     try:
         result = retrieve_events()
