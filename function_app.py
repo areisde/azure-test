@@ -50,7 +50,7 @@ def ingest_articles(req: func.HttpRequest) -> func.HttpResponse:
 @app.route(route="retrieve", methods=["GET"])
 def retrieve_articles(req: func.HttpRequest) -> func.HttpResponse:
     try:
-        result = #retrieve.retrieve_events()
+        #result = retrieve.retrieve_events()
         return func.HttpResponse(
             #json.dumps(result),
             "retrieved",

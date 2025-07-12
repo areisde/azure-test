@@ -3,6 +3,7 @@ from services import embeddings
 from db import crud
 from db import crud
 import numpy as np
+import torch
 
 def filter_article(article: models.Article) -> bool:
     """
@@ -22,35 +23,20 @@ def filter_article(article: models.Article) -> bool:
 
     return filtered
 
-def cosine_similarity_filter(article: models.Article) -> bool:
+def smart_filter(article : models.Article) -> bool:
     """
-    Filters an article based on cosine similarity with existing articles.
+    Filters an article based on similarity to relevant or irrelevant articles
     Args:
-        article (Article): The article to filter.
+        article (Article) : The article to filter
     Returns:
-        bool: True if the article is relevant, False otherwise.
+        bool: True if the article is considered relevant
     """
-    # Embed input article and fetch database
-    article_embedding = embeddings.embed_text(article.title)
-    similar_articles = crud.get_similar_articles(article_embedding)
-    
-    # Split articles into relevant and irrelevant based on the similarity results
-    relevant_articles = [article[1] for article in similar_articles if article[2]['relevant'] == True]
-    irrelevant_articles = [article[1] for article in similar_articles if article[2]['relevant'] == False]
-    
-    print(len(relevant_articles), "relevant articles found")
-    print(len(irrelevant_articles), "irrelevant articles found")
-    
-    avg_relevant_score = np.mean(relevant_articles)
-    avg_irrelevant_score = np.mean(irrelevant_articles) 
-    
-    print("Average relevant score:", avg_relevant_score)
-    print("Average irrelevant score:", avg_irrelevant_score)
-    
-    if avg_relevant_score > avg_irrelevant_score:
-        return True
-    
-    return False
+    classifier = torch.load("it_news_filter.joblib")
+
+    first_sentence = article["body"].split(".")[0]
+    text = f"{article['title']} {first_sentence}"
+
+    embedded_article = embeddings.embed_text(text)
 
 def keyword_filter(article: models.Article) -> bool:
     """
