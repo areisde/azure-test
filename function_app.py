@@ -1,9 +1,8 @@
 import azure.functions as func
 from api import crawl
-#from api import ingest
-#from api import retrieve
+from api import ingest
+from api import retrieve
 import json
-import feedparser
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
@@ -21,7 +20,7 @@ def crawl_and_process(req: func.HttpRequest) -> func.HttpResponse:
             f"Error: {str(e)}",
             status_code=500
         )
-"""
+
 @app.route(route="ingest", methods=["POST"])
 def ingest_articles(req: func.HttpRequest) -> func.HttpResponse:
     try:
@@ -61,4 +60,3 @@ def retrieve_articles(req: func.HttpRequest) -> func.HttpResponse:
             status_code=500,
             mimetype="application/json"
         )
-"""
