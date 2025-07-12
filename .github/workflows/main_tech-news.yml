@@ -69,9 +69,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_6654B179EED0421F9FE4C03F63354E5A }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3B015A279FE84E8A818DA19AA26F72EE }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9FAB9390A4B34EBD8FC0B19FC12CC9D1 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E6C6FD046C5546C0BB78837AFF290172 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_DA81539314AF4B499587A27DE5A500EF }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_142B4E7E06F44696A9DE6F8F8AE932E2 }}
 
       - name: 'Deploy to Azure Functions'
         uses: Azure/functions-action@v1
@@ -80,6 +80,4 @@ jobs:
           app-name: 'tech-news'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          scm-do-build-during-deployment: true
-          enable-oryx-build: true
           
