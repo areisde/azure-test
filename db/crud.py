@@ -14,9 +14,10 @@ def get_sources():
     try:
         url = os.environ.get("SUPABASE_URL")
         key = os.environ.get("SUPABASE_KEY")
-        supabase = create_client(url, key)
-        response = supabase.table('sources').select('*').execute()
-        sources = response.data
+        if key and url:
+            supabase = create_client(url, key)
+            response = supabase.table('sources').select('*').execute()
+            sources = response.data
     except Exception as e:
         # Log or handle error as needed
         print(f"Error fetching sources: {e}")
@@ -88,21 +89,22 @@ def upload_article(article):
     try:
         url = os.environ.get("SUPABASE_URL")
         key = os.environ.get("SUPABASE_KEY")
-        supabase = create_client(url, key)
-        supabase.table('articles').insert(
-            {
-            "id": article.id, 
-            "title": article.title, 
-             "body": article.body, 
-             "published_at": article.published_at,
-             "source": article.source}
-        ).execute()
-        return True
+        if key and url:
+            supabase = create_client(url, key)
+            supabase.table('articles').insert(
+                {
+                "id": article.id, 
+                "title": article.title, 
+                "body": article.body, 
+                "published_at": article.published_at,
+                "source": article.source}
+            ).execute()
+            return True
     except Exception as e:
         print(f"Error uploading article: {e}")
         return False
     
-def get_articles() -> list:
+def get_articles():
     """
     Get all articles stored from the database.
     Returns:
@@ -111,9 +113,10 @@ def get_articles() -> list:
     try:
         url = os.environ.get("SUPABASE_URL")
         key = os.environ.get("SUPABASE_KEY")
-        supabase = create_client(url, key)
-        response = supabase.table('articles').select('*').execute()
-        return response.data
+        if key and url:
+            supabase = create_client(url, key)
+            response = supabase.table('articles').select('*').execute()
+            return response.data
     except Exception as e:
         print(f"Error fetching articles: {e}")
         return []

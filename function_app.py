@@ -1,5 +1,4 @@
 import azure.functions as func
-import feedparser
 from api import crawl
 from api import ingest
 from api import retrieve

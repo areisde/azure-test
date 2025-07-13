@@ -11,7 +11,7 @@ def load_sources():
         rss_feeds (list): List of RSS feed URLs.
         subreddits (list): List of subreddit names.
     """
-    sources = []#crud.get_sources()
+    sources = crud.get_sources()
     rss_feeds = [s['url'] for s in sources if s['type'] == 'rss']
     subreddits = [s['name'] for s in sources if s['type'] == 'reddit']
     return rss_feeds, subreddits
@@ -32,7 +32,7 @@ def fetch_rss_articles(rss_urls):
         if 'entries' not in feed:
             return articles  # Return empty if no entries found
         for entry in feed.entries:
-            summary_raw = entry.get('summary', '')
+            summary_raw = str(entry.get('summary', ''))
             summary_clean = BeautifulSoup(html.unescape(summary_raw), "html.parser").get_text(separator="\n", strip=True)
             article = {
                 'id': entry.get('id', entry.get('link', '')),

@@ -9,8 +9,9 @@ def retrieve_events():
     """
     try:
         articles_relevant = crud.get_articles()
-        sorted_events = sorted(articles_relevant, key=lambda x: x['published_at'], reverse=True)
-        return sorted_events
+        #sorted_events = sorted(articles_relevant, key=lambda x: x['published_at'], reverse=True)
+        #return sorted_events
+        return articles_relevant
     except Exception as e:
         return {"error": f"An error occurred while retrieving events: {str(e)}"}
 

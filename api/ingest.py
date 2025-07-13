@@ -1,7 +1,5 @@
-from db import models
 from services import filter
-
-
+from db import models
 
 def ingest_articles(articles):
     """
