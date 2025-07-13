@@ -5,3 +5,5 @@ litellm
 openai
 beautifulsoup4
 joblib
+huggingface-hub
+scikit-learn

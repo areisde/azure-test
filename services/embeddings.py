@@ -5,14 +5,14 @@ from sklearn.preprocessing import normalize
 
 model = InferenceClient(
     provider="hf-inference",
-    api_key=os.environ["HF_TOKEN"],
+    api_key=os.environ.get("HF_TOKEN"),
     model="sentence-transformers/all-MiniLM-L6-v2"
 )
 
 def embed_text(text):
     # Embed text
     vec = model.feature_extraction(text)
-    
+
     # Convert to numpy array
     embedding_np = np.array(vec)
 

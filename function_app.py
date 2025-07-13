@@ -1,8 +1,8 @@
 import azure.functions as func
 import feedparser
-#from api import crawl
-#from api import ingest
-#from api import retrieve
+from api import crawl
+from api import ingest
+from api import retrieve
 import json
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
@@ -10,10 +10,9 @@ app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 @app.route(route="crawl", methods=["GET"])
 def crawl_and_process(req: func.HttpRequest) -> func.HttpResponse:
     try:
-        #result = crawl.crawl_and_process()
+        result = crawl.crawl_and_process()
         return func.HttpResponse(
-            #str(result),
-            "worked to build",
+            str(result),
             status_code=200,
             mimetype="application/json"
         )
@@ -27,7 +26,7 @@ def crawl_and_process(req: func.HttpRequest) -> func.HttpResponse:
 def ingest_articles(req: func.HttpRequest) -> func.HttpResponse:
     try:
         articles = req.get_json()
-        success = True #ingest.ingest_articles(articles)
+        success = ingest.ingest_articles(articles)
         if success:
             return func.HttpResponse(
                 json.dumps({"message": "Articles ingested successfully."}),
@@ -50,10 +49,9 @@ def ingest_articles(req: func.HttpRequest) -> func.HttpResponse:
 @app.route(route="retrieve", methods=["GET"])
 def retrieve_articles(req: func.HttpRequest) -> func.HttpResponse:
     try:
-        #result = retrieve.retrieve_events()
+        result = retrieve.retrieve_events()
         return func.HttpResponse(
-            #json.dumps(result),
-            "retrieved",
+            json.dumps(result),
             status_code=200,
             mimetype="application/json"
         )

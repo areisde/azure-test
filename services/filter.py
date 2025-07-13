@@ -1,12 +1,12 @@
 from db import models
-#from services import embeddings
-#from db import crud
-#from db import crud
+from services import embeddings
+from db import crud
 #import numpy as np
-#import torch
 import feedparser
+import joblib
+import logging
 
-def filter_article(article: models.Article) -> bool:
+def filter_article(article: models.Article) -> models.Article:
     """
     Given an article embed it and perform a database search for closest articles
     Args:
@@ -14,18 +14,16 @@ def filter_article(article: models.Article) -> bool:
     Returns:
         bool: True if relevant, False otherwise.
     """
+    logging.info("Filter called")
+    relevant = smart_filter(article)
 
-    #filtered = cosine_similarity_filter(article)
-    filtered = keyword_filter(article)
-
-    if filtered:
+    if relevant:
         # If the article is relevant, upload it to the database
-        #crud.upload_article(article)
-        pass
+        crud.upload_article(article)
 
-    return filtered
+    return article
 
-def smart_filter(article : models.Article) -> bool:
+def smart_filter(article : models.Article, threshold=0.55) -> bool:
     """
     Filters an article based on similarity to relevant or irrelevant articles
     Args:
@@ -33,13 +31,16 @@ def smart_filter(article : models.Article) -> bool:
     Returns:
         bool: True if the article is considered relevant
     """
-    #classifier = torch.load("it_news_filter.joblib")
+    classifier = joblib.load("models/it_news_filter.joblib")
 
-    #first_sentence = article["body"].split(".")[0]
-    #text = f"{article['title']} {first_sentence}"
+    first_sentence = article["body"].split(".")[0]
+    text = f"{article['title']} {first_sentence}"
 
-    #embedded_article = embeddings.embed_text(text)
-    return True
+    embedded_article = embeddings.embed_text(text)
+    logging.info(embedded_article)
+    proba  = classifier.predict_proba(embedded_article)
+    label = (proba >= threshold)  
+    return label
 
 def keyword_filter(article: models.Article) -> bool:
     """

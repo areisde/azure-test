@@ -10,8 +10,9 @@ def crawl_and_process():
         dict: JSON array of processed relevant articles.
     """
     articles = crawler.crawl_all_sources()
-    result = ingest.process_articles(articles)
+    result = ingest.ingest_articles(articles)
+
     return {
-    #    "processed": result
-        "processed" : "Yes you got to the lib !"
+        "Relevant articles": result
+    #    "processed" : "Yes you got to the lib !"
     }
