@@ -1,9 +1,10 @@
 from db import models
-from services import embeddings
-from db import crud
-from db import crud
-import numpy as np
-import torch
+#from services import embeddings
+#from db import crud
+#from db import crud
+#import numpy as np
+#import torch
+import feedparser
 
 def filter_article(article: models.Article) -> bool:
     """
@@ -19,7 +20,8 @@ def filter_article(article: models.Article) -> bool:
 
     if filtered:
         # If the article is relevant, upload it to the database
-        crud.upload_article(article)
+        #crud.upload_article(article)
+        pass
 
     return filtered
 
@@ -31,12 +33,13 @@ def smart_filter(article : models.Article) -> bool:
     Returns:
         bool: True if the article is considered relevant
     """
-    classifier = torch.load("it_news_filter.joblib")
+    #classifier = torch.load("it_news_filter.joblib")
 
-    first_sentence = article["body"].split(".")[0]
-    text = f"{article['title']} {first_sentence}"
+    #first_sentence = article["body"].split(".")[0]
+    #text = f"{article['title']} {first_sentence}"
 
-    embedded_article = embeddings.embed_text(text)
+    #embedded_article = embeddings.embed_text(text)
+    return True
 
 def keyword_filter(article: models.Article) -> bool:
     """

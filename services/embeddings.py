@@ -1,12 +1,26 @@
-from sentence_transformers import SentenceTransformer
+import os
+import numpy as np
+from huggingface_hub import InferenceClient
+from sklearn.preprocessing import normalize 
 
-model = SentenceTransformer('all-MiniLM-L6-v2',
-                            revision="main",
-                            trust_remote_code=False)
+model = InferenceClient(
+    provider="hf-inference",
+    api_key=os.environ["HF_TOKEN"],
+    model="sentence-transformers/all-MiniLM-L6-v2"
+)
 
 def embed_text(text):
-    vec = model.encode([text],
-                        normalize_embeddings=True,
-                        convert_to_numpy=True,
-                        )
-    return vec[0]
+    # Embed text
+    vec = model.feature_extraction(text)
+    
+    # Convert to numpy array
+    embedding_np = np.array(vec)
+
+    # Normalize manually (L2)
+    embedding_norm = normalize(embedding_np.reshape(1, -1), norm="l2")[0]
+    return embedding_norm
+
+
+
+
+
