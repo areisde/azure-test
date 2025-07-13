@@ -1,10 +1,9 @@
-from typing import List
 from db import models
 from services import filter
 
 
 
-def ingest_articles(articles: List[dict]):
+def ingest_articles(articles):
     """
     Ingest a batch of raw article objects as a list of dicts.
     Each object must have id, source, title, body (optional), published_at.

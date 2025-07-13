@@ -1,12 +1,10 @@
 from db import models
 from services import embeddings
 from db import crud
-#import numpy as np
-import feedparser
 import joblib
 import logging
 
-def filter_article(article: models.Article) -> models.Article:
+def filter_article(article):
     """
     Given an article embed it and perform a database search for closest articles
     Args:
@@ -23,7 +21,7 @@ def filter_article(article: models.Article) -> models.Article:
 
     return article
 
-def smart_filter(article : models.Article, threshold=0.55) -> bool:
+def smart_filter(article, threshold=0.55):
     """
     Filters an article based on similarity to relevant or irrelevant articles
     Args:
@@ -42,7 +40,7 @@ def smart_filter(article : models.Article, threshold=0.55) -> bool:
     label = (proba >= threshold)  
     return label
 
-def keyword_filter(article: models.Article) -> bool:
+def keyword_filter(article):
     """
     Filters an article based on the presence of keywords in its title or body.
     Args:

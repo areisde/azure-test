@@ -1,6 +1,5 @@
 import os
 from supabase import create_client
-#import vecs
 from . import models
 
 
