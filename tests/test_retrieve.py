@@ -4,12 +4,6 @@ import datetime
 from unittest.mock import patch
 from api import retrieve
 
-def load_test_articles():
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    FILE_PATH = os.path.join(BASE_DIR, "data", "test.json")
-    with open(FILE_PATH, "r") as f:
-        return json.load(f)
-
 def test_retrieve_articles():
     results = retrieve.retrieve_events()
 

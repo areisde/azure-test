@@ -3,6 +3,7 @@ from api import crawl
 from api import ingest
 from api import retrieve
 import json
+import logging
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
@@ -24,24 +25,56 @@ def crawl_articles(req: func.HttpRequest) -> func.HttpResponse:
 @app.route(route="ingest", methods=["POST"])
 def ingest_articles(req: func.HttpRequest) -> func.HttpResponse:
     try:
-        articles = req.get_json()
-        success = ingest.ingest_articles(articles)
-        if success:
-            return func.HttpResponse(
-                json.dumps({"message": "Articles ingested successfully."}),
-                status_code=200,
-                mimetype="application/json"
-            )
-        else:
-            return func.HttpResponse(
-                json.dumps({"error": "Error ingesting articles."}),
-                status_code=400,
-                mimetype="application/json"
-            )
+        # Try parsing as a regular JSON array
+        try:
+            articles = req.get_json()
+            if not isinstance(articles, list):
+                raise ValueError("Expected a list of articles")
+        except (ValueError, json.JSONDecodeError):
+            # Fallback: try to parse as NDJSON stream
+            raw_body = req.get_body().decode("utf-8").strip()
+            articles = []
+            for i, line in enumerate(raw_body.splitlines(), start=1):
+                try:
+                    article = json.loads(line)
+                    articles.append(article)
+                except json.JSONDecodeError as e:
+                    return func.HttpResponse(
+                        json.dumps({"error": f"Invalid JSON on line {i}: {str(e)}"}),
+                        status_code=400,
+                        mimetype="application/json"
+                    )
+
+        # Check article structure
+        for article in articles:
+            if not isinstance(article, dict):
+                return func.HttpResponse(
+                    json.dumps({"error": "Each article must be a JSON object."}),
+                    status_code=400,
+                    mimetype="application/json"
+                )
+            required_keys = ["id", "source", "title", "published_at"]
+            if not all(key in article for key in required_keys):
+                return func.HttpResponse(
+                    json.dumps({"error": f"Missing required keys in article: {article}"}),
+                    status_code=400,
+                    mimetype="application/json"
+                )
+
+        # Ingest articles
+        result = ingest.ingest_articles(articles)
+
+        return func.HttpResponse(
+            json.dumps({"message": "Articles ingested successfully.", "count": len(result)}),
+            status_code=200,
+            mimetype="application/json"
+        )
+
     except Exception as e:
+        logging.exception("Unexpected error during ingestion")
         return func.HttpResponse(
             json.dumps({"error": str(e)}),
-            status_code=400,
+            status_code=500,
             mimetype="application/json"
         )
 
