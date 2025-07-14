@@ -7,7 +7,7 @@ from function_app import retrieve_articles
 
 
 def test_retrieve_articles():
-    req = func.HttpRequest(hi
+    req = func.HttpRequest(
         method="GET",
         url="/api/retrieve",
         body=None,
