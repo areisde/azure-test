@@ -5,6 +5,14 @@ on:
     branches: [main]
   pull_request:
 
+env:
+    SUPABASE_URL : ${{ secrets.SUPABASE_URL }}
+    SUPABASE_KEY : ${{ secrets.SUPABASE_KEY }}
+    HF_TOKEN : ${{ secrets.HF_TOKEN }}
+    OPENAI_API_KEY : ${{ secrets.OPENAI_API_KEY }}
+    POSTGRES_CONNECTION_STRING : ${{ secrets.POSTGRES_CONNECTION_STRING }}
+    DB_RESULTS_LIMIT : ${{ secrets.DB_RESULTS_LIMIT }}
+
 jobs:
   test:
     runs-on: ubuntu-latest

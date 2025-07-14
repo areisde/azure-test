@@ -127,4 +127,5 @@ def get_articles():
             return response.data
     except Exception as e:
         print(f"Error fetching articles: {e}")
-        return []
+        
+    return []
