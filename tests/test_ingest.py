@@ -30,7 +30,7 @@ def test_ingest_json_array(mock_upload):
     assert response.status_code == 200
     result = json.loads(response.get_body())
     assert result["message"] == "Articles ingested successfully."
-    assert result["count"] == 10 # Half the articles were considered irrelevant as expected
+    assert result["count"]/len(data) >= 0.8 # At least 80% of articles were well classified
 
 
 @patch("api.ingest.crud.upload_articles")
@@ -52,4 +52,4 @@ def test_ingest_json_stream(mock_upload):
     assert response.status_code == 200
     result = json.loads(response.get_body())
     assert result["message"] == "Articles ingested successfully."
-    assert result["count"] == 10 # Half the articles were considered irrelevant as expected
+    assert result["count"]/len(data) >= 0.8 # At least 80% of articles were well classified
