@@ -24,16 +24,12 @@ def ingest_articles(articles):
 
         logging.info("Filtering relevant articles...")
         labels, embedded_articles = filter.relevant_articles(article_objs)
-
         relevant_articles = [a for a, is_relevant in zip(article_objs, labels) if is_relevant ] # Keep only articles considered relevant
         relevant_articles_embedded = [emb_a for emb_a, is_relevant in zip(embedded_articles, labels) if is_relevant] # Same for the embeddings
 
         # Score importance
-        logging.info("Scoring importance...")
-        importance_scores = filter.importance_score(relevant_articles_embedded)
-
-        for art, score in zip(relevant_articles, importance_scores):
-            art.importance_score = float(score)
+        importance_score = filter.importance_score(relevant_articles_embedded)
+        freshness_score = filter.freshness_score(relevant_articles)
 
         logging.info("Uploading relevant articles to the database")
         crud.upload_articles(relevant_articles)

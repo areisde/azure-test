@@ -5,11 +5,9 @@ import joblib
 import logging
 import os
 import numpy as np
-import datetime as dt
 
 
-
-def relevant_articles(articles, threshold=0.65):
+def relevant_articles(articles, threshold=0.55):
     """
     Vectorizes all articles at once and predicts relevance.
     Args:
@@ -19,7 +17,7 @@ def relevant_articles(articles, threshold=0.65):
         Embedded_articles : article embeddings
     """
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    MODEL_PATH = os.path.join(BASE_DIR, "models", "relevant_model.joblib")
+    MODEL_PATH = os.path.join(BASE_DIR, "models", "it_news_filter.joblib")
     classifier = joblib.load(MODEL_PATH)
 
     texts = []
@@ -43,7 +41,7 @@ def importance_score(embedded_articles):
 
     # Score based on parameters
     params = ["severe", "wide_scope", "high_impact"]
-    weights = {"severe" : os.environ.get("SEVERITY_WEIGHT"), "wide_scope" : os.environ.get("WIDE_SCOPE_WEIGHT"), "high_impact" : os.environ.get("HIGH_IMPACT_WEIGHT")}
+    weights = {"severe" : 0.5, "wide_scope" : 0.3, "high_impact" : 0.2}
     scores = {}
     
     for param in params:
@@ -51,28 +49,21 @@ def importance_score(embedded_articles):
         y_prob = clf.predict_proba(embedded_articles)[:, 1]
         scores[param] = y_prob
 
-    score = sum([float(weights[param])*scores[param] for param in params])
+    score = sum([weights[param]*scores[param] for param in params])
 
     return score
 
 def freshness_score(articles):
     """
     Args:
-        articles (List[dict]): List of article dictionaries with 'published_at'
-    Returns:
-        np.ndarray: Freshness scores for each article
+        articles: (List[Article])
+    Returns :
+        importance_score : freshness score of the article
     """
-    def parse_utc(published_at):
-        dt_obj = dt.datetime.fromisoformat(published_at.replace("Z", "+00:00"))
-        if dt_obj.tzinfo is None:
-            return dt_obj.replace(tzinfo=dt.timezone.utc)
-        return dt_obj
-
-    published = np.array([parse_utc(article["published_at"]) for article in articles])
+    published = [datetime.fromisoformat(article['published_at'].replace("Z", "+00:00")) for article in articles]
     now_utc = dt.datetime.now(dt.timezone.utc)
-    age_hours = np.array([(now_utc - p).total_seconds() / 3600 for p in published])
-
+    age_hours = (now_utc - published).total_seconds() / 3600
     tau_hours = 72
-    freshness_scores = np.exp(-age_hours / tau_hours)
+    freshness_score = math.exp(-age_hours / tau_hours)
 
-    return freshness_scores
+    return freshness_score

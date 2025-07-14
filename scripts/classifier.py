@@ -5,7 +5,7 @@ import json
 
 
 def load_prompt(version="v1"):
-    prompt_path = os.path.join(os.path.dirname(__file__), "prompts", "classifier", f"{version}.txt")
+    prompt_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "prompts", "classifier", f"{version}.txt")
     with open(prompt_path, "r") as f:
         return f.read()
 
@@ -32,10 +32,12 @@ def classify_article(article, prompt_version="v1"):
             content = response.choices[0].message.content.strip()
             json_content = json.loads(content)
 
-            if "relevant" in json_content and "summary" in json_content:
+            if "relevant" in json_content and "severe" in json_content and "wide_scope" in json_content and "high_impact" in json_content:
                 return {
                     "relevant": json_content["relevant"],
-                    "summary": json_content["summary"]
+                    "severe": json_content["severe"],
+                    "wide_scope": json_content["wide_scope"],
+                    "high_impact": json_content["high_impact"]
                 }
             else:
                 print(f"Unexpected response format: {content}")
@@ -46,6 +48,3 @@ def classify_article(article, prompt_version="v1"):
     except OpenAIError as e:
         print(f"Error during LLM completion: {e}")
         return False
-
-# Example usage:
-# result = classify_article(article, prompt_version="v1", llm_client=my_llm)

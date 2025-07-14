@@ -1,6 +1,7 @@
 import os
 from supabase import create_client
 from . import models
+import logging
 
 
 def get_sources():
@@ -100,7 +101,8 @@ def upload_articles(articles):
                 "title": a.title,
                 "body": a.body,
                 "published_at": a.published_at,
-                "source": a.source
+                "source": a.source,
+                "importance_score": a.importance_score
             }
             for a in articles
         ]

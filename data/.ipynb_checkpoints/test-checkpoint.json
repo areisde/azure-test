@@ -1,0 +1,182 @@
+[
+    {
+      "title": "Researchers spotted a zero-day exploit kit abusing CVE-2025-9911 in SSL-VPN gateways",
+      "body": "Researchers spotted an active zero-day exploit kit abusing CVE-2025-9911 in several SSL-VPN gateways. Administrators are urged to apply interim mitigations.",
+      "published_at": "2025-07-14T06:17:12Z",
+      "id": "https://example.com/1d1a4e62-fa2b-47cd-8f6a-1f3af741e601",
+      "created_at": "2025-07-14T06:19:12Z",
+      "source": "Cisco Talos",
+      "relevant": true
+    },
+    {
+      "title": "AWS is triaging a sev-1 outage in eu-south-1 affecting S3 and SNS",
+      "body": "AWS reports a sev-1 outage in eu-south-1, impacting S3 and SNS APIs. Engineers are rolling back a faulty networking update.",
+      "published_at": "2025-07-14T04:02:45Z",
+      "id": "https://example.com/24b7c7ce-0b3c-4dd2-9b9e-5a64afae0f02",
+      "created_at": "2025-07-14T04:04:45Z",
+      "source": "AWS",
+      "relevant": true
+    },
+    {
+      "title": "Okta confirms a breach exposing 73 K session tokens; password resets underway",
+      "body": "Okta acknowledged that threat actors exfiltrated 73 000 session tokens via a compromised support account. The company has forced global password resets.",
+      "published_at": "2025-07-13T22:48:09Z",
+      "id": "https://example.com/388c8aa1-5aae-4799-adc0-8191f4397e0e",
+      "created_at": "2025-07-13T22:50:09Z",
+      "source": "Okta",
+      "relevant": true
+    },
+    {
+      "title": "Google Cloud investigating high-severity vuln (CVE-2025-1024) enabling container escape",
+      "body": "Google Cloud engineers are validating reports of CVE-2025-1024, a container-escape flaw in GKE Autopilot. A patch is expected within 12 h.",
+      "published_at": "2025-07-13T21:07:31Z",
+      "id": "https://example.com/4e7a96f1-51a3-4cbe-bbd4-c7f9e9329cf6",
+      "created_at": "2025-07-13T21:09:31Z",
+      "source": "Google Cloud",
+      "relevant": true
+    },
+    {
+      "title": "Microsoft detects mass exploitation of CVE-2025-8409 against Exchange Online",
+      "body": "Microsoft warns that CVE-2025-8409, a post-auth RCE in Exchange Online, is being mass-exploited. Defender ATP detections have been updated.",
+      "published_at": "2025-07-14T03:12:54Z",
+      "id": "https://example.com/5c90e8df-9a4a-4aa2-9f11-b8b71dd4f7c3",
+      "created_at": "2025-07-14T03:14:54Z",
+      "source": "Microsoft",
+      "relevant": true
+    },
+    {
+      "title": "Fortinet ships emergency patch for CVE-2025-9977 allowing admin bypass in FortiOS",
+      "body": "Fortinet issued a hotfix for CVE-2025-9977 after proof-of-concept code surfaced on GitHub. Users should update immediately.",
+      "published_at": "2025-07-13T23:33:18Z",
+      "id": "https://example.com/6f1b6d8a-d8c6-4916-8e1e-a25eb172d6c4",
+      "created_at": "2025-07-13T23:35:18Z",
+      "source": "Fortinet",
+      "relevant": true
+    },
+    {
+      "title": "Elastic investigates data exfiltration via misconfigured snapshot repository",
+      "body": "Elastic Cloud Engineering is examining reports that a misconfigured snapshot repo leaked sensitive indices to the public internet.",
+      "published_at": "2025-07-14T01:27:06Z",
+      "id": "https://example.com/7eab21f5-9ed2-4eb2-8d26-730f7314047d",
+      "created_at": "2025-07-14T01:29:06Z",
+      "source": "Elastic",
+      "relevant": true
+    },
+    {
+      "title": "Zoom confirms zero-day (CVE-2025-9188) in macOS client exploited in-the-wild",
+      "body": "Zoom pushed version 7.2.11 to address CVE-2025-9188, a code-execution flaw already exploited in targeted attacks against macOS users.",
+      "published_at": "2025-07-14T05:55:00Z",
+      "id": "https://example.com/8365e18c-5038-41fa-b173-7d899c242ab8",
+      "created_at": "2025-07-14T05:57:00Z",
+      "source": "Zoom",
+      "relevant": true
+    },
+    {
+      "title": "Cloudflare mitigates large-scale DDoS peaking at 158 M rps against HTTP/2 endpoints",
+      "body": "Cloudflare automatically mitigated a record-breaking DDoS surge that peaked at 158 million requests per second targeting HTTP/2 endpoints.",
+      "published_at": "2025-07-13T20:42:26Z",
+      "id": "https://example.com/9c5ccef4-3279-41cf-b0f0-4e3dd1604694",
+      "created_at": "2025-07-13T20:44:26Z",
+      "source": "Cloudflare",
+      "relevant": true
+    },
+    {
+      "title": "Atlassian warns of malicious app impersonating Confluence Questions on Marketplace",
+      "body": "Atlassian Security removed a malicious app posing as ‘Confluence Questions’ that installed a backdoor on self-managed servers.",
+      "published_at": "2025-07-14T02:12:38Z",
+      "id": "https://example.com/a81f4fe0-55be-45d4-9039-7c7f6f3a5dc9",
+      "created_at": "2025-07-14T02:14:38Z",
+      "source": "Atlassian",
+      "relevant": true
+    },
+    {
+      "title": "Netflix introduces retro 8-bit theme in its TV app",
+      "body": "Netflix’s latest update adds an optional retro 8-bit UI theme for nostalgic viewers. No security changes were included.",
+      "published_at": "2025-07-14T00:22:19Z",
+      "id": "https://example.com/b23f1c2c-6c3d-4ff4-9fa4-5c7460c9e6df",
+      "created_at": "2025-07-14T00:24:19Z",
+      "source": "Netflix",
+      "relevant": false
+    },
+    {
+      "title": "Apple showcases translucent MacBook concept at WWDC",
+      "body": "Apple’s design team unveiled a translucent MacBook prototype, emphasizing sustainability and recyclability.",
+      "published_at": "2025-07-13T18:17:00Z",
+      "id": "https://example.com/c413ec43-60ff-47b4-918e-52112c34ddcd",
+      "created_at": "2025-07-13T18:19:00Z",
+      "source": "Apple",
+      "relevant": false
+    },
+    {
+      "title": "Steam adds collectible profile frames for summer sale",
+      "body": "Valve’s Steam platform now lets users equip animated frames around profile avatars during the 2025 summer sale event.",
+      "published_at": "2025-07-13T19:05:11Z",
+      "id": "https://example.com/d912feed-75ec-4d9b-8291-0ef69d1a6d62",
+      "created_at": "2025-07-13T19:07:11Z",
+      "source": "Steam",
+      "relevant": false
+    },
+    {
+      "title": "Slack introduces ‘focus mode’ with automatic status updates",
+      "body": "Slack’s new focus mode dims channels and automatically sets Do-Not-Disturb status for preset intervals.",
+      "published_at": "2025-07-14T01:11:44Z",
+      "id": "https://example.com/e1a132c8-ec1d-4b19-a2f8-7d061e96fe23",
+      "created_at": "2025-07-14T01:13:44Z",
+      "source": "Slack",
+      "relevant": false
+    },
+    {
+      "title": "IBM Cloud launches dark-mode dashboard theme",
+      "body": "IBM Cloud’s console now supports a system-wide dark mode, improving accessibility for low-light environments.",
+      "published_at": "2025-07-13T23:03:57Z",
+      "id": "https://example.com/f5b47fd4-4360-4fa9-9ed3-62b59a4c8f4f",
+      "created_at": "2025-07-13T23:05:57Z",
+      "source": "IBM Cloud",
+      "relevant": false
+    },
+    {
+      "title": "Google Cloud debuts AI-assisted architecture diagrams in DrawIO",
+      "body": "A new integration auto-generates architecture diagrams from Terraform files within Google Cloud’s DrawIO add-on.",
+      "published_at": "2025-07-14T02:48:30Z",
+      "id": "https://example.com/0e56108e-f9b8-4c5b-b9d6-42d861923174",
+      "created_at": "2025-07-14T02:50:30Z",
+      "source": "Google Cloud",
+      "relevant": false
+    },
+    {
+      "title": "Oracle announces Java 23 preview with pattern-matching tweaks",
+      "body": "At JavaOne, Oracle teased Java 23 featuring record pattern improvements and sequenced collections.",
+      "published_at": "2025-07-13T21:48:22Z",
+      "id": "https://example.com/94ab7378-4d32-4fb8-ba4a-04e1e36b2d0d",
+      "created_at": "2025-07-13T21:50:22Z",
+      "source": "Oracle",
+      "relevant": false
+    },
+    {
+      "title": "NVIDIA showcases RTX 6090 with dual-slot liquid cooler at SIGGRAPH",
+      "body": "NVIDIA’s upcoming RTX 6090 GPU features a built-in dual-slot liquid cooling solution, aimed at AI workstations.",
+      "published_at": "2025-07-13T20:13:49Z",
+      "id": "https://example.com/a5d5c917-c4e1-4c3d-9e2a-ffe8ba55ab7a",
+      "created_at": "2025-07-13T20:15:49Z",
+      "source": "NVIDIA",
+      "relevant": false
+    },
+    {
+      "title": "Zoom rolls out 3-D avatars for informal meetings",
+      "body": "Zoom’s new 3-D avatar feature lets participants appear as customizable characters during casual calls.",
+      "published_at": "2025-07-14T03:41:08Z",
+      "id": "https://example.com/ba3a0e83-734d-4200-9c29-91b53a60d717",
+      "created_at": "2025-07-14T03:43:08Z",
+      "source": "Zoom",
+      "relevant": false
+    },
+    {
+      "title": "DigitalOcean adds cost-estimator widget to billing console",
+      "body": "DigitalOcean’s new billing widget projects monthly spend based on active droplets and bandwidth usage.",
+      "published_at": "2025-07-13T22:12:40Z",
+      "id": "https://example.com/ca2b7992-84e9-4a9e-9ed9-40495f91aed6",
+      "created_at": "2025-07-13T22:14:40Z",
+      "source": "DigitalOcean",
+      "relevant": false
+    }
+  ]

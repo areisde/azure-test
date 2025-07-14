@@ -15,4 +15,3 @@ class Article:
     url: str = ""
     source : str = ""
     created_at: str = ""
-    importance_score : float = 0
