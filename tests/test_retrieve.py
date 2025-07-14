@@ -10,7 +10,7 @@ def load_test_articles():
     with open(FILE_PATH, "r") as f:
         return json.load(f)
 
-def test_retrieve_articles(mock_get_articles):
+def test_retrieve_articles():
     results = retrieve.retrieve_events()
 
     assert isinstance(results, list)
