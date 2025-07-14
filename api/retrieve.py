@@ -18,7 +18,15 @@ def retrieve_events():
 
         # Rank those according to importance and freshness
         ranked_articles, scores = rank(articles_relevant)
-        return ranked_articles
+
+        # Embed the score in the article dict
+        articles_with_score = []
+        for article, score in ranked_articles:
+            article_copy = article.copy()  # avoid mutating original
+            article_copy["score"] = score
+            articles_with_score.append(article_copy)
+
+        return articles_with_score
     except Exception as e:
         return {"error": f"An error occurred while retrieving events: {str(e)}"}
 
