@@ -5,7 +5,7 @@ __pycache__/
 
 # Azure Functions
 local.settings.json
-infra
+infra/
 azure.yaml
 
 # Distribution / packaging
@@ -106,8 +106,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-.vscode
-.devcontainer
+.vscode/
+.devcontainer/
 
 # Spyder project settings
 .spyderproject
