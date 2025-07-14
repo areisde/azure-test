@@ -12,7 +12,7 @@ def crawl_articles(req: func.HttpRequest) -> func.HttpResponse:
     try:
         result = crawl.crawl_and_process()
         return func.HttpResponse(
-            str(result),
+            json.dumps({"message": "New articles crawled and ingested successfully.", "count": len(result)}),
             status_code=200,
             mimetype="application/json"
         )

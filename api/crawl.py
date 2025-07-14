@@ -15,6 +15,4 @@ def crawl_and_process():
 
     relevant_articles = ingest.ingest_articles(articles)
 
-    return {
-        "Relevant articles": [art.title for art in relevant_articles] # Only return the titles
-    }
+    return relevant_articles
