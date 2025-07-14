@@ -1,5 +1,7 @@
 from services import filter
 from db import models
+from db import crud
+import logging
 
 def ingest_articles(articles):
     """
@@ -7,19 +9,27 @@ def ingest_articles(articles):
     Each object must have id, source, title, body (optional), published_at.
     Returns True on success, False on error.
     """
+    logging.info("Ingesting articles...")
     try:
-        filtered_articles = []
-        for article in articles:
-            article_obj = models.Article(
-                id=article.get("id"),
-                source=article.get("source"),
-                title=article.get("title"),
-                body=article.get("body", ""),
-                published_at=article.get("published_at"),
+        article_objs = [
+            models.Article(
+                id=a.get("id"),
+                source=a.get("source"),
+                title=a.get("title"),
+                body=a.get("body", ""),
+                published_at=a.get("published_at"),
             )
-            article = filter.filter_article(article_obj)
-            filtered_articles.append(article)
-        return filtered_articles
+            for a in articles
+        ]
+
+        logging.info("Filtering relevant articles...")
+        labels = filter.relevant_articles(article_objs)
+        relevant_articles = [a for a, is_relevant in zip(article_objs, labels) if is_relevant ]
+
+        logging.info("Uploading relevant articles to the database")
+        crud.upload_articles(relevant_articles)
+
+        return relevant_articles
     except Exception as e:
         return {"error": f"An error occurred while retrieving events: {str(e)}"}
     

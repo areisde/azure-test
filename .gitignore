@@ -5,6 +5,8 @@ __pycache__/
 
 # Azure Functions
 local.settings.json
+infra
+azure.yaml
 
 # Distribution / packaging
 .Python
@@ -25,6 +27,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+.DS_Store
+
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -102,6 +106,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.vscode
+.devcontainer
 
 # Spyder project settings
 .spyderproject

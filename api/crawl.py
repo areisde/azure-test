@@ -1,5 +1,6 @@
 from services import crawler
 from . import ingest
+import logging
 
 
 def crawl_and_process():
@@ -10,9 +11,10 @@ def crawl_and_process():
         dict: JSON array of processed relevant articles.
     """
     articles = crawler.crawl_all_sources()
-    result = ingest.ingest_articles(articles)
+    logging.info("Done crawling latest news.")
+
+    relevant_articles = ingest.ingest_articles(articles)
 
     return {
-        "Relevant articles": result
-    #    "processed" : "Yes you got to the lib !"
+        "Relevant articles": [art.title for art in relevant_articles] # Only return the titles
     }

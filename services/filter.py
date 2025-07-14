@@ -3,42 +3,30 @@ from services import embeddings
 from db import crud
 import joblib
 import logging
+import os
+import numpy as np
 
-def filter_article(article):
+
+def relevant_articles(articles, threshold=0.55):
     """
-    Given an article embed it and perform a database search for closest articles
+    Vectorizes all articles at once and predicts relevance.
     Args:
-        article (Article): The article object to check.
+        articles (List[Article])
     Returns:
-        bool: True if relevant, False otherwise.
+        List[bool]: Labels for each article (True = relevant)
     """
-    logging.info("Filter called")
-    relevant = smart_filter(article)
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    MODEL_PATH = os.path.join(BASE_DIR, "models", "it_news_filter.joblib")
+    classifier = joblib.load(MODEL_PATH)
 
-    if relevant:
-        # If the article is relevant, upload it to the database
-        crud.upload_article(article)
+    texts = []
+    for article in articles:
+        first_sentence = article.body.split(".")[0]
+        texts.append(f"{article.title} {first_sentence}")
 
-    return article
-
-def smart_filter(article, threshold=0.55):
-    """
-    Filters an article based on similarity to relevant or irrelevant articles
-    Args:
-        article (Article) : The article to filter
-    Returns:
-        bool: True if the article is considered relevant
-    """
-    classifier = joblib.load("models/it_news_filter.joblib")
-
-    first_sentence = article["body"].split(".")[0]
-    text = f"{article['title']} {first_sentence}"
-
-    embedded_article = embeddings.embed_text(text)
-    logging.info(embedded_article)
-    proba  = classifier.predict_proba(embedded_article)
-    label = (proba >= threshold)  
-    return label
+    embedded_articles = np.vstack([embeddings.embed_text(t) for t in texts])
+    proba = classifier.predict_proba(embedded_articles)[:, 1]
+    return proba >= threshold  # returns a boolean array
 
 def keyword_filter(article):
     """

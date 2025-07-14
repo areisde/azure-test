@@ -1,4 +1,5 @@
 from db import crud
+import logging
 
 def retrieve_events():
     """
@@ -8,6 +9,7 @@ def retrieve_events():
         List[dict]: A list of event objects sorted by published_at in descending order.
     """
     try:
+        logging.info("Retrieving relevant articles...")
         articles_relevant = crud.get_articles()
         #sorted_events = sorted(articles_relevant, key=lambda x: x['published_at'], reverse=True)
         #return sorted_events

@@ -78,30 +78,38 @@ def get_sources():
 #    
 #    return results
 
-def upload_article(article):
+def upload_articles(articles):
     """
-    Upload an article to the database.
+    Upload a list of articles to the database using batch upsert.
     Args:
-        article (dict): The article to upload.
+        articles (List[Article]): The list of articles to upload.
     Returns:
-        bool: True if upload was successful, False otherwise
+        bool: True if upload was successful, False otherwise.
     """
     try:
         url = os.environ.get("SUPABASE_URL")
         key = os.environ.get("SUPABASE_KEY")
-        if key and url:
-            supabase = create_client(url, key)
-            supabase.table('articles').insert(
-                {
-                "id": article.id, 
-                "title": article.title, 
-                "body": article.body, 
-                "published_at": article.published_at,
-                "source": article.source}
-            ).execute()
-            return True
+        if not (key and url):
+            return False
+
+        supabase = create_client(url, key)
+
+        payload = [
+            {
+                "id": a.id,
+                "title": a.title,
+                "body": a.body,
+                "published_at": a.published_at,
+                "source": a.source
+            }
+            for a in articles
+        ]
+
+        supabase.table("articles").upsert(payload).execute()
+        return True
+
     except Exception as e:
-        print(f"Error uploading article: {e}")
+        print(f"Error batch uploading articles: {e}")
         return False
     
 def get_articles():

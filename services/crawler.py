@@ -2,6 +2,7 @@ import feedparser
 import html
 from bs4 import BeautifulSoup
 from db import crud
+import logging
 
 
 def load_sources():
@@ -55,6 +56,7 @@ def crawl_all_sources():
     Returns:
         List[Dict]: Combined list of articles from RSS feeds and Reddit.
     """
+    logging.info("Crawling latest news...")
     rss_feeds, subreddits = load_sources()
     articles = []
     
