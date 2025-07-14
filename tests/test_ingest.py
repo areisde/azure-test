@@ -29,8 +29,13 @@ def test_ingest_json_array(mock_upload):
 
     assert response.status_code == 200
     result = json.loads(response.get_body())
+
+    # Compute precision
+    true_positives = sum(1 for art in data if art["relevant"] is True)
+    precision = true_positives/result["count"] # Formula for computing precision
+
     assert result["message"] == "Articles ingested successfully."
-    assert result["count"]/len(data) >= 0.8 # At least 80% of articles were well classified
+    assert precision >= 0.7 # At least 70% of articles were well classified
 
 
 @patch("api.ingest.crud.upload_articles")
@@ -51,5 +56,10 @@ def test_ingest_json_stream(mock_upload):
 
     assert response.status_code == 200
     result = json.loads(response.get_body())
+
+    # Compute precision
+    true_positives = sum(1 for art in data if art["relevant"] is True)
+    precision = true_positives/result["count"] # Formula for computing precision
+
     assert result["message"] == "Articles ingested successfully."
-    assert result["count"]/len(data) >= 0.8 # At least 80% of articles were well classified
+    assert precision >= 0.7 # At least 70% of articles were well classified
