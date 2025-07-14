@@ -7,7 +7,7 @@ import json
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
 @app.route(route="crawl", methods=["GET"])
-def crawl_and_process(req: func.HttpRequest) -> func.HttpResponse:
+def crawl_articles(req: func.HttpRequest) -> func.HttpResponse:
     try:
         result = crawl.crawl_and_process()
         return func.HttpResponse(

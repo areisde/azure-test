@@ -8,3 +8,4 @@ joblib
 huggingface-hub
 scikit-learn
 numpy
+pytest
