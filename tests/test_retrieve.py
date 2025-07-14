@@ -1,12 +1,23 @@
+import azure.functions as func
 import json
 import os
 import datetime
 from unittest.mock import patch
-from api import retrieve
+from function_app import retrieve_articles
+
 
 def test_retrieve_articles():
-    results = retrieve.retrieve_events()
+    req = func.HttpRequest(
+        method="GET",
+        url="/api/retrieve",
+        body=None,
+        headers={}
+    )
 
+    response = retrieve_articles(req)
+    assert response.status_code == 200
+    
+    results = json.loads(response.get_body())
     assert isinstance(results, list)
 
     for item in results:
