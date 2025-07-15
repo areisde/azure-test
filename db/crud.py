@@ -25,60 +25,6 @@ def get_sources():
         
     return sources
 
-
-#def add_filter(filter_obj: models.Filter) -> bool:
-#    """
-#    Insert a filter into the filters table.
-#    Args:
-#        filter_obj (Filter): The filter object to insert.
-#    Returns:
-#        bool: True if insert was successful, False otherwise
-#    """
-#    try:
-#
-#        connection_string = os.environ.get("POSTGRES_CONNECTION_STRING")
-#        vx = vecs.create_client(connection_string)
-#        docs = vx.get_or_create_collection("filters", dimension=len(filter_obj.embedding))
-#        vector = [(
-#            filter_obj.url,
-#            filter_obj.embedding.tolist(),
-#            {"relevant": filter_obj.relevant}
-#        )]
-#        
-#        docs.upsert(vector)
-#        
-#        return True
-#    except Exception as e:
-#        print(f"Error inserting filter: {e}")
-#        return False
-
-
-#def get_similar_articles(article_embedding) -> list:
-#    """
-#    Get similar articles based on the article embedding.
-#    Args:
-#        article_embedding (List[float]): The embedding of the article to check.
-#    Returns:
-#        List[Dict]: List of similar articles with keys: id, title, body, published_at
-#    """
-#    try:
-#        connection_string = os.environ.get("POSTGRES_CONNECTION_STRING")
-#        vx = vecs.create_client(connection_string)
-#        docs = vx.get_collection("filters")
-#        
-#        results = docs.query(
-#            data=article_embedding,
-#            limit=100,
-#            measure="cosine_distance",
-#            include_value=True,
-#            include_metadata=True,
-#        )
-#    except Exception as e:
-#        print(f"Error fetching similar articles: {e}")
-#        return []
-#    
-#    return results
-
 def upload_articles(articles):
     """
     Upload a list of articles to the database using batch upsert.

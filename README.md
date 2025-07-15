@@ -1,201 +1,275 @@
-<!--
+# IT-News Relevance & Ranking Service
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](LICENSE)
+
+A serverless pipeline that **crawls tech-news feeds, filters for enterprise-IT relevance, ranks incidents by urgency**, and exposes them through HTTP & scheduled Azure Functions.
+
 ---
-name: Azure Functions Python HTTP Trigger using Azure Developer CLI
-description: This repository contains an Azure Functions HTTP trigger quickstart written in Python and deployed to Azure Functions Flex Consumption using the Azure Developer CLI (azd). The sample uses managed identity and a virtual network to make sure deployment is secure by default. You can opt out of a VNet being used in the sample by setting VNET_ENABLED to false in the parameters.
-page_type: sample
-languages:
-- azdeveloper
-- python
-- bicep
-products:
-- azure
-- azure-functions
-- entra-id
-urlFragment: functions-quickstart-python-azd
+
+## 📁 Project layout
+```
+.
+├── api/                    # Azure Function endpoints (HTTP + timer)
+│   ├── crawl.py            # Timer trigger → run crawler every 6 hours
+│   ├── ingest.py           # Filters, scores and saves relevant articles to the DB
+│   └── retrieve.py         # returns filtered & ranked articles
+├── services/               # core logic
+│   ├── crawler.py          # fetch RSS/Reddit sources
+│   ├── embeddings.py       # MiniLM encoder wrapper
+│   ├── filter.py           # Binary relevant article classifier + scoring functions
+├── prompts/                # zero-shot prompt templates for generating training data
+├── models/                 # .joblib weights for each binary classifier / filter
+├── sql/                    # SQL to execute on supabase to create the database
+├── db/                     # Database functions and models
+│   ├── crud.py             # Helper functions to fetch sources and upsert article batches
+│   ├── models.py           # Dataclass schemas (Source, Article) used throughout the app.
+├── tests/                  # pytest unit tests for retrieve and ingest endpoints
+├── scripts/                # Files used for preparing data and training models
+│   ├── label_dataset.ipynb # Label, train and save models
+│   ├── classifier.py       # Functions to label article using LLMs
+├── function_app.py         # Azure Functions entry-point
+└── host.json               # host configuration
+```
 ---
--->
 
-# Azure Functions Python HTTP Trigger using Azure Developer CLI
+## 🔍 Filtering
+Large-language models are *excellent* at spotting whether a news item matters to an IT manager (they understand “zero-day”, “sev-1”, “S3 outage”, etc.).  
+**Problem:** each call is nondeterministic and expensive, which is unacceptable for an always-on pipeline. So, I took another approach.
 
-This template repository contains an HTTP trigger reference sample for Azure Functions written in Python and deployed to Azure using the Azure Developer CLI (`azd`). The sample uses managed identity and a virtual network to make sure deployment is secure by default.
+### 1 · Synthetic data
+* I first generated a dataset of 200 articles for training and 50 articles for testing on chatGPT using o3.
+### 2 · Labelling
+* **Zero-shot prompt** (`prompts/classifier/v1.txt`) is sent to GPT-4o to label each headline + first paragraph (if any) with four Boolean flags:  
+  `relevant`, `severe`, `wide_scope`, `high_impact`.  
+* 1-shot+examples prompt ensures consistent labels → deterministic JSON.
 
-This source code supports the article [Quickstart: Create and deploy functions to Azure Functions using the Azure Developer CLI](https://learn.microsoft.com/azure/azure-functions/create-first-function-azure-developer-cli?pivots=programming-language-python).
+### 3 · Embedding  
+* **Sentence-Transformers `all-MiniLM-L6-v2`** (384-dim, frozen, L2-normalised).  
+* Same vector is reused by *every* classifier → single forward pass per article.
 
-## Prerequisites
+### 4 · Filter
+| Flag | Model | Class weight | Why logistic? |
+|------|-------|--------------|---------------|
+| `relevant` | Logistic R. (`lbfgs`, C chosen by 5-fold GridSearchCV) | `balanced` | High recall with linear decision surface, easy to threshold. |
 
-+ [Python 3.11](https://www.python.org/)
-+ [Azure Functions Core Tools](https://learn.microsoft.com/azure/azure-functions/functions-run-local?pivots=programming-language-python#install-the-azure-functions-core-tools)
-+ [Azure Developer CLI (AZD)](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd)
-+ To use Visual Studio Code to run and debug locally:
-  + [Visual Studio Code](https://code.visualstudio.com/)
-  + [Azure Functions extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
+Final values stored in `models/relevant_model.joblib`, ensuring deterministic predictions.
 
-## Initialize the local project
+---
 
-You can initialize a project from this `azd` template in one of these ways:
+## 📈 Ranking
+In the same lofic as filtering, I trained three tiny “weak learners”** – plain logistic-regression heads – on the frozen MiniLM embeddings.  
+   *They’re “weak” in the boosting sense: individually simple, but in aggregate they capture enough signal.*
 
-+ Use this `azd init` command from an empty local (root) folder:
+| Flag | Model | Class weight | Why logistic? |
+|------|-------|--------------|---------------|
+| `severe` | Logistic R. (`lbfgs`, C chosen by 5-fold GridSearchCV) | `balanced` | Separates “critical” vs “routine” with few features. |
+| `wide_scope` | Logistic R. (`lbfgs`, C chosen by 5-fold GridSearchCV) | `balanced` | Captures vendor keywords + semantic distance. |
+| `high_impact` | Logistic R. (`lbfgs`, C chosen by 5-fold GridSearchCV) | `balanced` | Learns phrases like “millions of records”. |
 
-    ```shell
-    azd init --template functions-quickstart-python-http-azd
-    ```
+```text
+importance_score =
+    0.70 × ( 0.50·P(severe)
+           + 0.30·P(wide_scope)
+           + 0.20·P(high_impact) )
+  + 0.30 × freshness
+````
+Elements are then ranked according to the importance_score
 
-    Supply an environment name, such as `flexquickstart` when prompted. In `azd`, the environment is used to maintain a unique deployment context for your app.
+---
 
-+ Clone the GitHub template repository locally using the `git clone` command:
+## 🚦 Pipeline
 
-    ```shell
-    git clone https://github.com/Azure-Samples/functions-quickstart-python-http-azd.git
-    cd functions-quickstart-python-azd
-    ```
+1. **Entry points (two ways in)**  
+   * **Timer trigger `crawl_sources`**  
+     * Fires every **6 h** (`0 0 */6 * * *`).  
+     * Calls `crawl.crawl_and_process()` → pulls RSS feeds → returns an **array of dicts**.  
+   * **HTTP route `POST /api/ingest`**  
+     * Accepts a JSON **array** *or* **ND-JSON** stream pushed by clients.
 
-    You can also clone the repository from your own fork in GitHub.
+2. **Shared ingest routine `ingest.ingest_articles()`**  
+   1. **Hydrate** each raw dict into `models.Article`.  
+   2. **Relevance filter**  
+      * MiniLM embedding → `relevant_model.joblib`.  
+      * Keep if `P(relevant) ≥ 0.55` (class-weight *balanced* → high recall).  
+   3. **Importance scoring**  
+      | Head (model) | Predicts | File | Default weight |
+      |--------------|----------|------|----------------|
+      | `severe_model` | zero-day / sev-1 / CVSS ≥ 9 | `models/severe_model.joblib` | **0.50** |
+      | `wide_scope_model` | tier-1 vendor affected | `models/wide_scope_model.joblib` | **0.30** |
+      | `high_impact_model` | millions of users / global outage | `models/high_impact_model.joblib` | **0.20** |
+      * **Freshness** =`e^(−age / 72 h)` (weight **0.30**).  
+      * All four scores are stored on the `Article` object.  
+   4. **Compute total**  
+      ```text
+        importance_score =
+            0.70 · ( 0.50 · P(severe)
+                   + 0.30 · P(wide_scope)
+                   + 0.20 · P(high_impact) )
+          + 0.30 · freshness
+      ```
 
-## Prepare your local environment
+3. **Persist – `crud.upload_articles()`**  
+   * Batch **UPSERT** into Supabase `articles` table (idempotent on `id`).  
+   * Columns include `severity_score`, `wide_scope_score`, `high_impact_score`, `importance_score`, `published_at`, etc.
 
-Add a file named `local.settings.json` in the root of your project with the following contents:
+4. **Retrieve – `GET /api/retrieve`**  
+   * `retrieve.retrieve_events()` runs  
+     ```sql
+     SELECT * FROM articles
+     ORDER BY importance_score DESC, published_at DESC
+     LIMIT $n;
+     ```  
+   * Each element in the returned array is a **JSON object** enriched with scores
+produced by the pipeline:
 
-```json
-{
-    "IsEncrypted": false,
-    "Values": {
-    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-    "FUNCTIONS_WORKER_RUNTIME": "python"
-    }
-}
+        ```jsonc
+        {
+        "id": "https://www.computerweekly.com/news/366627640/…",
+        "title": "Luxury retailer LVMH says UK customer data was stolen in cyber attack",
+        "body": "UK customers of luxury goods brand Louis Vuitton have been warned …",
+        "published_at": "2025-07-14T10:45:00Z",
+        "created_at": "2025-07-15T09:41:19.7979Z",
+        "source": "computerweekly",
+
+        // model-generated signals  (0 – 1 probabilities)
+        "severity_score":     0.400745,
+        "wide_scope_score":   0.585280,
+        "high_impact_score":  0.859793,
+
+        // final ranking value
+        "score":   0.598855
+        }
+
+5. **Client usage**  
+   * Dashboards, Slack bots, or SIEM webhooks hit **`/api/retrieve`** to obtain a ranked feed.  
+   * All weights (`SEVERITY_WEIGHT`, `WIDE_SCOPE_WEIGHT`, `HIGH_IMPACT_WEIGHT`, `FRESHNESS_WEIGHT`) and the cron schedule are **overridable via environment variables**—no redeploy required.
+
+---
+
+## 📈 Pipeline diagram
+```
+┌─────────────────┐         internal call
+│ crawl_sources   │       (timer function)
+│  - crawler.py   │  <────────────────────────── Scheduler  (every 6 h)
+└─────┬───────────┘
+      │ raw dicts
+      ▼
+┌───────────────────────┐      
+│ ingest_articles       │      HTTP POST /api/ingest
+│  (http + shared code) │  <─────────────────────────── Client pushes new batches                     
+└─────┬─────────────────┘                             
+      │ Article dataclass objects               
+      ▼                                         
+┌───────────────────────────┐
+│ filter.relevant_articles  │
+│  • MiniLM embedding       │
+│  • relevant_model         │
+└─────┬─────────────────────┘
+      │ labels + vectors
+      ▼
+ ─ keep only “True” ───────────────────────────────────────────
+      ▼
+┌─────────────────────┐
+│ importance_score    │
+│  • severe_model     │ 0.50 weight
+│  • wide_scope_model │ 0.30 weight
+│  • high_impact_model│ 0.20 weight
+└─────┬───────────────┘
+      │ scores injected into Article objects
+      ▼
+┌─────────────────────────┐
+│ crud.upload_articles    │  ➜ Supabase `articles` table
+└─────────────────────────┘
+
+
+
+
+
+HTTP GET /api/retrieve
+┌─────────────────┐
+│  retrieve.py    │
+└─────────────────┘
+      │ ranking:
+      │   ORDER BY importance_score DESC
+      │   0.7*(0.5·severity + 0.3·scope + 0.2·impact) + 0.3·freshness
+      ▼
+┌─────────────────┐
+│ JSON response   │
+└─────────────────┘
+
 ```
 
-## Create a virtual environment
+## 🧰 Tech Stack Overview
 
-The way that you create your virtual environment depends on your operating system.
-Open the terminal, navigate to the project folder, and run these commands:
+| Layer | Choice | Why |
+|-------|--------|-----|
+| **Serverless runtime** | **Azure Functions** | Native timer & HTTP triggers, zero-ops scaling, easy CI/CD |
+| **Scheduler** | Azure Timer Trigger (`crawl_sources`, 6-hour cron) | Keeps crawler code and API in the same deployment unit. |
+| **Database** | **Supabase (PostgreSQL)** | Instant REST API, row-level security, “upsert” support, generous free tier for prototypes. Easy to set-up |
+| **LLM providers** | OpenAI **GPT-4o** for one-off labelling · **o3** for synthetic headline generation | Best zero-shot quality (4o) and deterministic text generation (o3). |
+| **ML library** | **scikit-learn** (LogisticRegression, GridSearchCV) | Fast, interpretable, deterministic. |
+| **Embeddings** | `sentence-transformers/all-MiniLM-L6-v2` | 384-dim, CPU-friendly, MIT license. Easy to set-up |
+| **Frontend** | **Nuxt 3** SPA, deployed as static files to **AWS S3 + CloudFront** <br>*(separate repo: `https://github.com/you/it-news-frontend`)* | CDN-backed delivery, zero server maintenance. |
+| **CI / CD** | GitHub Actions · pytest · coverage badge | Lints, unit-tests, and auto-deploys to Azure on push to `main`. |
 
-### Linux/macOS/bash
+---
+
+### 🗄️  Supabase schema
+
+#### `sources` table
+| column | type | note |
+|--------|------|------|
+| `id` *(PK)* | `uuid` | auto-gen |
+| `name` | `text` | “AWS status”, “Tom’s Hardware”… |
+| `url`  | `text` | Feed endpoint |
+| `type` | `text` | `rss` / `json` |
+
+#### `articles` table
+| column | type | note |
+|--------|------|------|
+| `id` *(PK)* | `text` | canonical URL or GUID |
+| `title` | `text` | headline |
+| `body` | `text` | first paragraphs |
+| `published_at` | `timestamptz` |
+| `source` | `text` |
+| `severity_score` | `float4` |
+| `wide_scope_score` | `float4` |
+| `high_impact_score` | `float4` |
+| `created_at` | `timestamptz` | *default now()* |
+
+---
+
+## 📈 Evaluating filtering & ranking
+Done inside `scripts/label_dataset.ipynb` after training each model and ranking algorithms.
+
+| Layer | Method | Metric |
+|-------|--------|--------|
+| **Filtering (relevant / irrelevant)** | • Use GPT-4o once as an “oracle” to relabel the test batch.<br>• Compare my model’s output → **Precision / Recall** (recall is the KPI). | Target: **R ≥ 0.80**, P ≥ 0.70 |
+| **Ranking inside the relevant set** | • Three independent LLMs score `severe`, `scope`, `impact`. <br>• Average → ground-truth **importance_score**. <br>• Items above the median count as “positive”. | **Precision@5**, **nDCG@5**, MAP |
+
+*This keeps evaluation deterministic, avoids manual labelling, and focuses on recall (don’t miss critical news) while still checking that top-ranked items match the LLM consensus.*
+
+### 🔗  External repos
+
+* **Backend (this repo):** serverless API, ML models, data pipeline  
+* **Frontend:** [`it-news-frontend`](https://github.com/you/it-news-frontend) – Nuxt 3 SPA that consumes `/api/retrieve` and renders a real-time dashboard.
+
+---
+
+## 🚀 Quick-start (local)
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-```
+# 1. Clone & install
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
 
-#### Windows (Cmd)
+# 2. Set env vars
+cp env.example .env   # edit DB path, feed URLs, etc.
 
-```shell
-py -m venv .venv
-.venv\scripts\activate
-```
+# 3. Run all functions locally
+func start   # needs Azure Functions Core Tools ≥4
 
-## Run your app from the terminal
+# 4. Trigger crawl manually
+curl http://localhost:7071/api/crawl
 
-1. To start the Functions host locally, run these commands in the virtual environment:
-
-    ```shell
-    pip3 install -r requirements.txt
-    func start
-    ```
-
-1. From your HTTP test tool in a new terminal (or from your browser), call the HTTP GET endpoint: <http://localhost:7071/api/httpget>
-
-1. Test the HTTP POST trigger with a payload using your favorite secure HTTP test tool. This example uses the `curl` tool with payload data from the [`testdata.json`](./testdata.json) project file:
-
-    ```shell
-    curl -i http://localhost:7071/api/httppost -H "Content-Type: text/json" -d @testdata.json
-    ```
-
-1. When you're done, press Ctrl+C in the terminal window to stop the `func.exe` host process.
-
-1. Run `deactivate` to shut down the virtual environment.
-
-## Run your app using Visual Studio Code
-
-1. Open the root folder in a new terminal.
-1. Run the `code .` code command to open the project in Visual Studio Code.
-1. Press **Run/Debug (F5)** to run in the debugger. Select **Debug anyway** if prompted about local emulator not running.
-1. Send GET and POST requests to the `httpget` and `httppost` endpoints respectively using your HTTP test tool (or browser for `httpget`). If you have the [RestClient](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension installed, you can execute requests directly from the [`test.http`](test.http) project file.
-
-## Source Code
-
-The source code for both functions is in the [`function_app.py`](./function_app.py) code file. Azure Functions requires the use of the `@azure/functions` library.
-
-This code shows an HTTP GET triggered function:  
-
-```python
-@app.route(route="httpget", methods=["GET"])
-def http_get(req: func.HttpRequest) -> func.HttpResponse:
-    name = req.params.get("name", "World")
-
-    logging.info(f"Processing GET request. Name: {name}")
-
-    return func.HttpResponse(f"Hello, {name}!")
-```
-
-This code shows an HTTP POST triggered function:
-
-```python
-@app.route(route="httppost", methods=["POST"])
-def http_post(req: func.HttpRequest) -> func.HttpResponse:
-    try:
-        req_body = req.get_json()
-        name = req_body.get('name')
-        age = req_body.get('age')
-        
-        logging.info(f"Processing POST request. Name: {name}")
-
-        if name and isinstance(name, str) and age and isinstance(age, int):
-            return func.HttpResponse(f"Hello, {name}! You are {age} years old!")
-        else:
-            return func.HttpResponse(
-                "Please provide both 'name' and 'age' in the request body.",
-                status_code=400
-            )
-    except ValueError:
-        return func.HttpResponse(
-            "Invalid JSON in request body",
-            status_code=400
-        )
-```
-
-## Deploy to Azure
-
-Run this command to provision the function app, with any required Azure resources, and deploy your code:
-
-```shell
-azd up
-```
-
-By default, this sample deploys with a virtual network (VNet) for enhanced security, ensuring that the function app and related resources are isolated within a private network. 
-The `VNET_ENABLED` parameter controls whether a VNet is used during deployment:
-- When `VNET_ENABLED` is `true` (default), the function app is deployed with a VNet for secure communication and resource isolation.
-- When `VNET_ENABLED` is `false`, the function app is deployed without a VNet, allowing public access to resources.
-
-This parameter replaces the previous `SKIP_VNET` parameter. If you were using `SKIP_VNET` in earlier versions, set `VNET_ENABLED` to `false` to achieve the same behavior.
-
-To disable the VNet for this sample, set `VNET_ENABLED` to `false` before running `azd up`:
-```bash
-azd env set VNET_ENABLED false
-azd up
-```
-
-You're prompted to supply these required deployment parameters:
-
-| Parameter | Description |
-| ---- | ---- |
-| _Environment name_ | An environment that's used to maintain a unique deployment context for your app. You aren't prompted when you created the local project using `azd init`.|
-| _Azure subscription_ | Subscription in which your resources are created.|
-| _Azure location_ | Azure region in which to create the resource group that contains the new Azure resources. Only regions that currently support the Flex Consumption plan are shown.|
-
-To learn how to obtain your new function endpoints in Azure along with the required function keys, see [Invoke the function on Azure](https://learn.microsoft.com/azure/azure-functions/create-first-function-azure-developer-cli?pivots=programming-language-java#invoke-the-function-on-azure) in the companion article [Quickstart: Create and deploy functions to Azure Functions using the Azure Developer CLI](https://learn.microsoft.com/azure/azure-functions/create-first-function-azure-developer-cli?pivots=programming-language-java#invoke-the-function-on-azure).
-
-## Redeploy your code
-
-You can run the `azd up` command as many times as you need to both provision your Azure resources and deploy code updates to your function app.
-
->[!NOTE]
->Deployed code files are always overwritten by the latest deployment package.
-
-## Clean up resources
-
-When you're done working with your function app and related resources, you can use this command to delete the function app and its related resources from Azure and avoid incurring any further costs:
-
-```shell
-azd down
-```
+Note: The timer trigger in function_app.py fires automatically every 6 h
+(0 0 */6 * * *). Set run_on_startup=True while debugging.
