@@ -7,21 +7,14 @@ import logging
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
-@app.route(route="crawl", methods=["GET"])
-def crawl_articles(req: func.HttpRequest) -> func.HttpResponse:
-    try:
-        result = crawl.crawl_and_process()
-        return func.HttpResponse(
-            json.dumps({"message": "New articles crawled and ingested successfully.", "count": len(result)}),
-            status_code=200,
-            mimetype="application/json"
-        )
-    except Exception as e:
-        return func.HttpResponse(
-            f"Error: {str(e)}",
-            status_code=500
-        )
+@app.function_name(name="crawl_sources")
+@app.timer_trigger(schedule="0 0 */6 * * *", arg_name="mytimer")
+def crawl_articles(mytimer: func.TimerRequest) -> None:
+    logging.info("Running news crawler")
+    results = crawl.crawl_and_process()
+    logging.info(f"News crawler is done running and found {len(results)} relevant results")
 
+@app.function_name(name="ingest_articles")
 @app.route(route="ingest", methods=["POST"])
 def ingest_articles(req: func.HttpRequest) -> func.HttpResponse:
     try:
@@ -78,6 +71,7 @@ def ingest_articles(req: func.HttpRequest) -> func.HttpResponse:
             mimetype="application/json"
         )
 
+@app.function_name(name="retrieve_articles")
 @app.route(route="retrieve", methods=["GET"])
 def retrieve_articles(req: func.HttpRequest) -> func.HttpResponse:
     try:

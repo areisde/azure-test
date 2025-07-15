@@ -52,9 +52,9 @@ def importance_score(articles, embedded_articles):
         scores[param] = y_prob
 
     for art, sev_score, wide_score, high_score in zip(articles, scores["severe"], scores["wide_scope"], scores["high_impact"]):
-            art["severity_score"] = sev_score
-            art["wide_scope_score"] = wide_score
-            art["high_impact_score"] = high_score
+            art.severity_score = sev_score
+            art.wide_scope_score = wide_score
+            art.high_impact_score = high_score
 
     return articles
 
