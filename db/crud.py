@@ -102,7 +102,9 @@ def upload_articles(articles):
                 "body": a.body,
                 "published_at": a.published_at,
                 "source": a.source,
-                "importance_score": a.importance_score
+                "severity_score": a.severity_score,
+                "wide_scope_score": a.wide_scope_score,
+                "high_impact_score": a.high_impact_score
             }
             for a in articles
         ]

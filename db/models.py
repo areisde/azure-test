@@ -15,4 +15,6 @@ class Article:
     url: str = ""
     source : str = ""
     created_at: str = ""
-    importance_score : float = 0
+    severity_score : float = 0
+    wide_scope_score : float = 0
+    high_impact_score : float = 0

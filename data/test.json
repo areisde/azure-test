@@ -178,5 +178,275 @@
       "created_at": "2025-07-13T22:14:40Z",
       "source": "DigitalOcean",
       "relevant": false
+    },
+    {
+      "title": "Citrix patches CVE-2025-7721 allowing unauthenticated RCE in NetScaler ADC",
+      "body": "Citrix released firmware 14.2-37.32 that fixes CVE-2025-7721, an unauthenticated RCE actively exploited against internet-facing ADC appliances.",
+      "published_at": "2025-07-14T07:21:10Z",
+      "id": "https://example.com/b1d63e43-2d3e-4a52-8a8d-fbd987d49a5a",
+      "created_at": "2025-07-14T07:23:10Z",
+      "source": "Citrix",
+      "relevant": true
+    },
+    {
+      "title": "VMware ESXi servers hit by new ransomware strain ‘HyperLock’",
+      "body": "Mandiant researchers report HyperLock encrypts ESXi datastores via CVE-2025-8484; no decryptor is available.",
+      "published_at": "2025-07-14T06:58:02Z",
+      "id": "https://example.com/2f5a5b0b-bc43-457c-86c1-0cfd4b2d6e62",
+      "created_at": "2025-07-14T07:00:02Z",
+      "source": "Mandiant",
+      "relevant": true
+    },
+    {
+      "title": "AWS adds dark-mode toggle to IAM console",
+      "body": "AWS today introduced a dark-mode theme for the IAM console to reduce eye strain. No functional changes were included.",
+      "published_at": "2025-07-14T05:15:47Z",
+      "id": "https://example.com/1459e291-0080-4ad6-9e3a-8160c34c41f5",
+      "created_at": "2025-07-14T05:17:47Z",
+      "source": "AWS",
+      "relevant": false
+    },
+    {
+      "title": "Okta outage in APAC blocks SSO logins for two hours",
+      "body": "Okta blamed the incident on a faulty database schema change; services restored after rollback.",
+      "published_at": "2025-07-14T06:03:31Z",
+      "id": "https://example.com/45c0a15b-e7c0-4b32-86d1-7f8e3240d61e",
+      "created_at": "2025-07-14T06:05:31Z",
+      "source": "Okta Status",
+      "relevant": true
+    },
+    {
+      "title": "Microsoft rolls out Teams emoji skin-tone selector",
+      "body": "The July Teams client adds granular skin-tone selection for reactions. No security fixes.",
+      "published_at": "2025-07-14T04:48:55Z",
+      "id": "https://example.com/5c1568aa-0f2e-40e9-8ab0-5d20b74de33c",
+      "created_at": "2025-07-14T04:50:55Z",
+      "source": "Microsoft",
+      "relevant": false
+    },
+    {
+      "title": "CISA adds SonicWall CVE-2025-2879 to KEV catalog; federal agencies must patch by July 20",
+      "body": "CVE-2025-2879 is an auth-bypass flaw in SonicOS. Agencies have five days to comply.",
+      "published_at": "2025-07-14T07:42:08Z",
+      "id": "https://example.com/6d1d2a2b-53ae-4d94-9d53-6d4598e71029",
+      "created_at": "2025-07-14T07:44:08Z",
+      "source": "CISA",
+      "relevant": true
+    },
+    {
+      "title": "DigitalOcean schedules NYC3 network maintenance for August 3",
+      "body": "Expected impact is up to 5 minutes of packet loss per droplet during the two-hour window.",
+      "published_at": "2025-07-14T03:26:18Z",
+      "id": "https://example.com/7e977eb3-9bf3-4c74-93dc-4632073ea1db",
+      "created_at": "2025-07-14T03:28:18Z",
+      "source": "DigitalOcean Status",
+      "relevant": true
+    },
+    {
+      "title": "Apple releases watchOS 12 beta with new sleep-tracking ring",
+      "body": "Developers can download watchOS 12 beta 1 today; no security advisories were issued.",
+      "published_at": "2025-07-13T23:51:07Z",
+      "id": "https://example.com/8120f823-fb6e-4eb5-bc74-3bb6c09b9da2",
+      "created_at": "2025-07-13T23:53:07Z",
+      "source": "Apple",
+      "relevant": false
+    },
+    {
+      "title": "GitHub Actions workflow tokens leaked in public repo",
+      "body": "Security researcher found 12 long-lived workflow tokens hard-coded in an open-source project; GitHub revoked them.",
+      "published_at": "2025-07-14T05:37:40Z",
+      "id": "https://example.com/9d3f12d9-4124-4c70-9456-1f5d0a9e97cb",
+      "created_at": "2025-07-14T05:39:40Z",
+      "source": "GitHub Security",
+      "relevant": true
+    },
+    {
+      "title": "Oracle Cloud adds ‘quick cron’ UI for scheduled functions",
+      "body": "The new interface lets users pick common cron expressions from a dropdown.",
+      "published_at": "2025-07-14T01:14:59Z",
+      "id": "https://example.com/a4d06473-8faa-46e6-98e2-8d4b957881d2",
+      "created_at": "2025-07-14T01:16:59Z",
+      "source": "Oracle Cloud",
+      "relevant": false
+    },
+    {
+      "title": "Red Hat ships urgent kernel fix for CVE-2025-8842 privilege escalation",
+      "body": "RHEL 9.5 users should apply kernel-5.15.0-251 immediately; active exploitation detected.",
+      "published_at": "2025-07-14T06:25:12Z",
+      "id": "https://example.com/b5c56b69-cf4c-4fb8-9dff-1e6e7ae5973d",
+      "created_at": "2025-07-14T06:27:12Z",
+      "source": "Red Hat Security",
+      "relevant": true
+    },
+    {
+      "title": "IBM QRadar outage prevents log ingestion for EU tenants",
+      "body": "IBM acknowledged ingestion delays of up to three hours for EU-based QRadar Cloud tenants; root cause under investigation.",
+      "published_at": "2025-07-14T05:02:31Z",
+      "id": "https://example.com/c0fa4bf1-6b29-4aa3-9e31-badfc4e2f38a",
+      "created_at": "2025-07-14T05:04:31Z",
+      "source": "IBM Cloud",
+      "relevant": true
+    },
+    {
+      "title": "Cisco adds rainbow sidebar theme to Webex",
+      "body": "The optional theme can be enabled in preferences; no backend changes were made.",
+      "published_at": "2025-07-13T22:27:14Z",
+      "id": "https://example.com/d760bf57-25cf-4a7c-ae19-ffcbfca0be23",
+      "created_at": "2025-07-13T22:29:14Z",
+      "source": "Cisco",
+      "relevant": false
+    },
+    {
+      "title": "Cloudflare turns on HTTP/3 by default for free tier",
+      "body": "All zones on the free plan now serve HTTP/3 without manual enablement; no downtime expected.",
+      "published_at": "2025-07-14T02:39:22Z",
+      "id": "https://example.com/e7cc0e73-aeab-4cea-9b87-e4b7e89828ec",
+      "created_at": "2025-07-14T02:41:22Z",
+      "source": "Cloudflare",
+      "relevant": false
+    },
+    {
+      "title": "Trend Micro reveals PoC for CVE-2025-7843 in Deep Security Manager",
+      "body": "PoC shows unauthenticated SQL injection; patch expected in 48 hours.",
+      "published_at": "2025-07-14T04:33:44Z",
+      "id": "https://example.com/f16d6c5b-e1e1-4b27-8bed-6731ce90b3e8",
+      "created_at": "2025-07-14T04:35:44Z",
+      "source": "Trend Micro",
+      "relevant": true
+    },
+    {
+      "title": "VMware adds drag-and-drop ISO upload in vSphere Client",
+      "body": "Quality-of-life feature only; no functional changes to ESXi.",
+      "published_at": "2025-07-14T01:52:12Z",
+      "id": "https://example.com/04fb9c15-2715-48bf-8b6b-39fe3caccc80",
+      "created_at": "2025-07-14T01:54:12Z",
+      "source": "VMware",
+      "relevant": false
+    },
+    {
+      "title": "Azure AD outage in Germany Central disrupts SAML logins",
+      "body": "Microsoft is reverting a rollout after authentication failures impacted multiple tenants.",
+      "published_at": "2025-07-14T06:44:18Z",
+      "id": "https://example.com/1118e9fe-9927-4dfb-8178-7126f265a8e1",
+      "created_at": "2025-07-14T06:46:18Z",
+      "source": "Azure Status",
+      "relevant": true
+    },
+    {
+      "title": "SUSE publishes advisory on glibc DNS spoofing flaw CVE-2025-9101",
+      "body": "OpenSUSE 15.6 users can install glibc-2.39-patch3; no active exploitation reported.",
+      "published_at": "2025-07-14T03:09:10Z",
+      "id": "https://example.com/22edcb47-a8d4-4459-90f2-26583d0b188e",
+      "created_at": "2025-07-14T03:11:10Z",
+      "source": "SUSE",
+      "relevant": true
+    },
+    {
+      "title": "GitLab adds confetti animation when closing issues",
+      "body": "GitLab 18.7 introduces a celebratory confetti burst when issues are closed; feature can be disabled in user settings.",
+      "published_at": "2025-07-13T21:34:48Z",
+      "id": "https://example.com/337c2dfe-a35f-4863-8e4c-9f98be2b6b24",
+      "created_at": "2025-07-13T21:36:48Z",
+      "source": "GitLab",
+      "relevant": false
+    },
+    {
+      "title": "Fastly mitigates global BGP route leak that slowed CDN traffic",
+      "body": "Fastly rerouted traffic after a mis-announced prefix caused latency spikes across Europe and Asia.",
+      "published_at": "2025-07-14T05:09:55Z",
+      "id": "https://example.com/4a6f10c8-76f4-4c67-9f01-2cfbe5c23b5a",
+      "created_at": "2025-07-14T05:11:55Z",
+      "source": "Fastly",
+      "relevant": true
+    },
+    {
+      "title": "Palo Alto Networks fixes PAN-OS path-traversal bug CVE-2025-9971",
+      "body": "Path-traversal can lead to arbitrary file read; update PAN-OS to 11.2.1-h2.",
+      "published_at": "2025-07-14T07:07:33Z",
+      "id": "https://example.com/5ea1554e-ccfd-47d3-95c4-4f96ef5e0f09",
+      "created_at": "2025-07-14T07:09:33Z",
+      "source": "Palo Alto Networks",
+      "relevant": true
+    },
+    {
+      "title": "Atlassian Confluence Cloud adds AI-generated meeting summaries",
+      "body": "The feature drafts action items after pasting Zoom transcripts; currently in beta.",
+      "published_at": "2025-07-14T02:05:08Z",
+      "id": "https://example.com/6fc2f691-794d-4c7e-9a7e-1721f6d3b42f",
+      "created_at": "2025-07-14T02:07:08Z",
+      "source": "Atlassian",
+      "relevant": false
+    },
+    {
+      "title": "Qualys discloses CVE-2025-3002 local root on systemd-based distros",
+      "body": "Exploit requires local access; patches available for Ubuntu, Debian, Fedora.",
+      "published_at": "2025-07-13T23:19:44Z",
+      "id": "https://example.com/7a27c591-2e2d-48f5-8d12-b5d8aec9c3de",
+      "created_at": "2025-07-13T23:21:44Z",
+      "source": "Qualys",
+      "relevant": true
+    },
+    {
+      "title": "New Relic adds customizable dark-mode dashboards",
+      "body": "Users can now apply per-dashboard themes; no backend changes were made.",
+      "published_at": "2025-07-14T00:58:29Z",
+      "id": "https://example.com/8ee4d914-6b4a-499a-9e5b-e9cf18dd5750",
+      "created_at": "2025-07-14T01:00:29Z",
+      "source": "New Relic",
+      "relevant": false
+    },
+    {
+      "title": "Snowflake outage in EU-West region causes ETL job failures",
+      "body": "Snowflake engineers traced the incident to a metadata service regression; most workloads recovered within 90 minutes.",
+      "published_at": "2025-07-14T06:12:41Z",
+      "id": "https://example.com/9f82c362-4379-41e8-9fd8-71bcbdd50335",
+      "created_at": "2025-07-14T06:14:41Z",
+      "source": "Snowflake",
+      "relevant": true
+    },
+    {
+      "title": "AWS releases CDK 3.0 with resource-graph visualizer",
+      "body": "Developers can now preview a graph of generated CloudFormation stacks before deployment.",
+      "published_at": "2025-07-13T22:05:12Z",
+      "id": "https://example.com/a60b7f15-73ee-44fa-af39-8c281b2e938e",
+      "created_at": "2025-07-13T22:07:12Z",
+      "source": "AWS",
+      "relevant": false
+    },
+    {
+      "title": "Microsoft 365 outage knocks out SharePoint search worldwide",
+      "body": "Search queries returned HTTP 503 for roughly 40 minutes; caused by faulty index update.",
+      "published_at": "2025-07-14T04:57:10Z",
+      "id": "https://example.com/b7c27a26-f118-4a19-9b35-0b9d9e3cea3c",
+      "created_at": "2025-07-14T04:59:10Z",
+      "source": "Microsoft 365 Status",
+      "relevant": true
+    },
+    {
+      "title": "JetBrains previews AI-powered code review suggestions in YouTrack",
+      "body": "The experimental feature suggests inline improvements using the JetBrains AI Assistant.",
+      "published_at": "2025-07-14T02:31:18Z",
+      "id": "https://example.com/bf71bd2a-bee5-46fa-af2c-5adb2a5b7f7c",
+      "created_at": "2025-07-14T02:33:18Z",
+      "source": "JetBrains",
+      "relevant": false
+    },
+    {
+      "title": "Akamai mitigates record 12-Tbps DDoS aimed at European bank",
+      "body": "Attack leveraged DNS reflection; Akamai routed traffic through scrubbing centers.",
+      "published_at": "2025-07-14T06:31:04Z",
+      "id": "https://example.com/ca5380e0-32ce-4e27-bb0a-b6104b943166",
+      "created_at": "2025-07-14T06:33:04Z",
+      "source": "Akamai",
+      "relevant": true
+    },
+    {
+      "title": "Oracle adds purple theme option to Cloud Console",
+      "body": "The cosmetic update includes a sunset gradient header; no API changes.",
+      "published_at": "2025-07-13T20:49:00Z",
+      "id": "https://example.com/dc19cc6d-3780-48d8-a190-6b27bf2343e8",
+      "created_at": "2025-07-13T20:51:00Z",
+      "source": "Oracle Cloud",
+      "relevant": false
     }
   ]

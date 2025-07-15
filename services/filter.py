@@ -9,7 +9,7 @@ import datetime as dt
 
 
 
-def relevant_articles(articles, threshold=0.65):
+def relevant_articles(articles, threshold=0.55):
     """
     Vectorizes all articles at once and predicts relevance.
     Args:
@@ -31,10 +31,11 @@ def relevant_articles(articles, threshold=0.65):
     proba = classifier.predict_proba(embedded_articles)[:, 1]
     return proba >= threshold, embedded_articles
 
-def importance_score(embedded_articles):
+def importance_score(articles, embedded_articles):
     """
     Args:
-        articles: List[np.array]
+        articles: List[Article]
+        embedded_articles : List[np.array]
     Returns :
         importance_score : importance score of the article
     """
@@ -43,7 +44,6 @@ def importance_score(embedded_articles):
 
     # Score based on parameters
     params = ["severe", "wide_scope", "high_impact"]
-    weights = {"severe" : os.environ.get("SEVERITY_WEIGHT"), "wide_scope" : os.environ.get("WIDE_SCOPE_WEIGHT"), "high_impact" : os.environ.get("HIGH_IMPACT_WEIGHT")}
     scores = {}
     
     for param in params:
@@ -51,9 +51,12 @@ def importance_score(embedded_articles):
         y_prob = clf.predict_proba(embedded_articles)[:, 1]
         scores[param] = y_prob
 
-    score = sum([float(weights[param])*scores[param] for param in params])
+    for art, sev_score, wide_score, high_score in zip(articles, scores["severe"], scores["wide_scope"], scores["high_impact"]):
+            art["severity_score"] = sev_score
+            art["wide_scope_score"] = wide_score
+            art["high_impact_score"] = high_score
 
-    return score
+    return articles
 
 def freshness_score(articles):
     """

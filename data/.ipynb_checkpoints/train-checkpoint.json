@@ -1,0 +1,1802 @@
+[
+  {
+    "title": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2025-1166",
+    "body": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2025-1166. Okta urges customers to upgrade.",
+    "published_at": "2025-07-12T04:38:14Z",
+    "id": "https://example.com/11d676b6-5c66-4344-a897-79119b86b4f9",
+    "created_at": "2025-07-12T04:40:14Z",
+    "source": "Okta",
+    "relevant": true
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2024-7924",
+    "body": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2024-7924. Google Cloud urges customers to upgrade.",
+    "published_at": "2025-07-12T09:38:14Z",
+    "id": "https://example.com/ecbb61ab-f48c-46ef-b292-be66faba3533",
+    "created_at": "2025-07-12T09:40:14Z",
+    "source": "Google Cloud",
+    "relevant": true
+  },
+  {
+    "title": "Elastic confirms a data breach exposing 488K customer records; incident response is underw",
+    "body": "Elastic confirms a data breach exposing 488K customer records; incident response is underway.",
+    "published_at": "2025-07-12T05:18:14Z",
+    "id": "https://example.com/75919e72-8cd3-48aa-a104-65de43370ef7",
+    "created_at": "2025-07-12T05:20:14Z",
+    "source": "Elastic",
+    "relevant": true
+  },
+  {
+    "title": "Elastic is investigating a critical vulnerability (CVE-2025-2638) allowing remote code exe",
+    "body": "Elastic is investigating a critical vulnerability (CVE-2025-2638) allowing remote code execution. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T07:33:14Z",
+    "id": "https://example.com/3c970892-c2e4-48bc-94ae-82d09a490f80",
+    "created_at": "2025-07-12T07:35:14Z",
+    "source": "Elastic",
+    "relevant": true
+  },
+  {
+    "title": "Netflix adds new emoji pack in the latest update; no security fixes are included",
+    "body": "Netflix adds new emoji pack in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T20:18:14Z",
+    "id": "https://example.com/86a35045-0466-4202-a59a-6708cacc74f6",
+    "created_at": "2025-07-11T20:20:14Z",
+    "source": "Netflix",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting ESXi, weaponizing CVE-2025-8484",
+    "body": "Researchers discovered a new exploit kit targeting ESXi, weaponizing CVE-2025-8484. Red Hat urges customers to upgrade.",
+    "published_at": "2025-07-12T02:03:14Z",
+    "id": "https://example.com/0491b04f-218f-4a5d-9a54-bcf6e36fc2b2",
+    "created_at": "2025-07-12T02:05:14Z",
+    "source": "Red Hat",
+    "relevant": true
+  },
+  {
+    "title": "Cloudflare confirms a data breach exposing 383K customer records; incident response is und",
+    "body": "Cloudflare confirms a data breach exposing 383K customer records; incident response is underway.",
+    "published_at": "2025-07-12T09:08:14Z",
+    "id": "https://example.com/e7f5ecb5-ac6b-4f82-807c-f57fd90e371a",
+    "created_at": "2025-07-12T09:10:14Z",
+    "source": "Cloudflare",
+    "relevant": true
+  },
+  {
+    "title": "Cisco is investigating a major vulnerability (CVE-2024-5335) allowing remote code executio",
+    "body": "Cisco is investigating a major vulnerability (CVE-2024-5335) allowing remote code execution. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T03:53:14Z",
+    "id": "https://example.com/8c377794-655f-4724-bbd7-3fef470ae806",
+    "created_at": "2025-07-12T03:55:14Z",
+    "source": "Cisco",
+    "relevant": true
+  },
+  {
+    "title": "Red Hat's annual conference highlights AI governance trends but announces no new security ",
+    "body": "Red Hat's annual conference highlights AI governance trends but announces no new security features.",
+    "published_at": "2025-07-11T22:43:14Z",
+    "id": "https://example.com/1444f4f5-23aa-427c-8051-f43b0f0e9c44",
+    "created_at": "2025-07-11T22:45:14Z",
+    "source": "Red Hat",
+    "relevant": false
+  },
+  {
+    "title": "Atlassian reports a critical outage in us-west-2, affecting services Cloud Functions, Conf",
+    "body": "Atlassian reports a critical outage in us-west-2, affecting services Cloud Functions, Confluence. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T06:03:14Z",
+    "id": "https://example.com/d37a108c-08cd-4ca8-9500-cf3d4b3f3bcc",
+    "created_at": "2025-07-12T06:05:14Z",
+    "source": "Atlassian",
+    "relevant": true
+  },
+  {
+    "title": "AWS adds animated stickers in the latest update; no security fixes are included",
+    "body": "AWS adds animated stickers in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T17:28:14Z",
+    "id": "https://example.com/4aafa14d-467c-4749-9138-6a2994063b53",
+    "created_at": "2025-07-11T17:30:14Z",
+    "source": "AWS",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting ESXi, weaponizing CVE-2024-5681",
+    "body": "Researchers discovered a new exploit kit targeting ESXi, weaponizing CVE-2024-5681. Atlassian urges customers to upgrade.",
+    "published_at": "2025-07-12T05:48:14Z",
+    "id": "https://example.com/8519dcf5-d911-4db1-afdb-58dfb3882972",
+    "created_at": "2025-07-12T05:50:14Z",
+    "source": "Atlassian",
+    "relevant": true
+  },
+  {
+    "title": "IBM Cloud adds sidebar color themes in the latest update; no security fixes are included",
+    "body": "IBM Cloud adds sidebar color themes in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T18:03:14Z",
+    "id": "https://example.com/1e17846d-73ab-47dd-abe6-48ebe2ed6250",
+    "created_at": "2025-07-11T18:05:14Z",
+    "source": "IBM Cloud",
+    "relevant": false
+  },
+  {
+    "title": "Microsoft's annual conference highlights quantum networking trends but announces no new se",
+    "body": "Microsoft's annual conference highlights quantum networking trends but announces no new security features.",
+    "published_at": "2025-07-11T19:38:14Z",
+    "id": "https://example.com/20eac380-ac7b-4073-99c4-4fd837956fff",
+    "created_at": "2025-07-11T19:40:14Z",
+    "source": "Microsoft",
+    "relevant": false
+  },
+  {
+    "title": "Azure's annual conference highlights edge computing trends but announces no new security f",
+    "body": "Azure's annual conference highlights edge computing trends but announces no new security features.",
+    "published_at": "2025-07-11T19:08:14Z",
+    "id": "https://example.com/3b0cbc6a-8751-43c7-9cf2-9e6ebe1609b6",
+    "created_at": "2025-07-11T19:10:14Z",
+    "source": "Azure",
+    "relevant": false
+  },
+  {
+    "title": "AWS is investigating a sev\u20111 vulnerability (CVE-2025-4150) allowing remote code execution",
+    "body": "AWS is investigating a sev\u20111 vulnerability (CVE-2025-4150) allowing remote code execution. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T09:28:14Z",
+    "id": "https://example.com/df350102-2f61-4c71-a2e5-7ecdcaa4706f",
+    "created_at": "2025-07-12T09:30:14Z",
+    "source": "AWS",
+    "relevant": true
+  },
+  {
+    "title": "Elastic reports a major outage in us-east-1, affecting services Outlook, Confluence",
+    "body": "Elastic reports a major outage in us-east-1, affecting services Outlook, Confluence. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T02:43:14Z",
+    "id": "https://example.com/4fce1103-95e1-48d3-8a5b-f0f5f937faf3",
+    "created_at": "2025-07-12T02:45:14Z",
+    "source": "Elastic",
+    "relevant": true
+  },
+  {
+    "title": "Oracle adds animated stickers in the latest update; no security fixes are included",
+    "body": "Oracle adds animated stickers in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T19:13:14Z",
+    "id": "https://example.com/6755157a-e89c-4248-923e-4037a91c57b8",
+    "created_at": "2025-07-11T19:15:14Z",
+    "source": "Oracle",
+    "relevant": false
+  },
+  {
+    "title": "Oracle is investigating a sev\u20111 vulnerability (CVE-2024-4657) allowing privilege escalatio",
+    "body": "Oracle is investigating a sev\u20111 vulnerability (CVE-2024-4657) allowing privilege escalation. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T09:48:14Z",
+    "id": "https://example.com/6ba69a1c-9976-4d5d-b444-a6d9dbd555fd",
+    "created_at": "2025-07-12T09:50:14Z",
+    "source": "Oracle",
+    "relevant": true
+  },
+  {
+    "title": "Azure confirms a data breach exposing 60K customer records; incident response is underway",
+    "body": "Azure confirms a data breach exposing 60K customer records; incident response is underway.",
+    "published_at": "2025-07-12T03:18:14Z",
+    "id": "https://example.com/2f742695-6243-46a2-9fd0-1a0c2331f018",
+    "created_at": "2025-07-12T03:20:14Z",
+    "source": "Azure",
+    "relevant": true
+  },
+  {
+    "title": "AWS reports a high\u2011severity outage in asia-northeast1, affecting services BigQuery, EC2",
+    "body": "AWS reports a high\u2011severity outage in asia-northeast1, affecting services BigQuery, EC2. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T05:28:14Z",
+    "id": "https://example.com/36fbbbd1-807f-45c1-829c-4f24c7563cef",
+    "created_at": "2025-07-12T05:30:14Z",
+    "source": "AWS",
+    "relevant": true
+  },
+  {
+    "title": "Fortinet's annual conference highlights edge computing trends but announces no new securit",
+    "body": "Fortinet's annual conference highlights edge computing trends but announces no new security features.",
+    "published_at": "2025-07-11T17:48:14Z",
+    "id": "https://example.com/8cfdb3f6-0f93-464d-8f57-789ca7619d5a",
+    "created_at": "2025-07-11T17:50:14Z",
+    "source": "Fortinet",
+    "relevant": false
+  },
+  {
+    "title": "Google Cloud adds collaborative cursors in the latest update; no security fixes are includ",
+    "body": "Google Cloud adds collaborative cursors in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T19:58:14Z",
+    "id": "https://example.com/346582cd-69a6-4355-93c2-fc4653f96290",
+    "created_at": "2025-07-11T20:00:14Z",
+    "source": "Google Cloud",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2025-8216",
+    "body": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2025-8216. Microsoft urges customers to upgrade.",
+    "published_at": "2025-07-12T04:08:14Z",
+    "id": "https://example.com/ef91d864-be72-4bb6-ab3b-98fe62387abd",
+    "created_at": "2025-07-12T04:10:14Z",
+    "source": "Microsoft",
+    "relevant": true
+  },
+  {
+    "title": "A popular forum thread compares mechanical keyboard to trackpad, debating aesthetics over ",
+    "body": "A popular forum thread compares mechanical keyboard to trackpad, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T19:53:14Z",
+    "id": "https://example.com/12305320-74d5-42a2-a913-489f35a4af6d",
+    "created_at": "2025-07-11T19:55:14Z",
+    "source": "SonicWall",
+    "relevant": false
+  },
+  {
+    "title": "IBM Cloud confirms a data breach exposing 401K customer records; incident response is unde",
+    "body": "IBM Cloud confirms a data breach exposing 401K customer records; incident response is underway.",
+    "published_at": "2025-07-12T06:58:14Z",
+    "id": "https://example.com/9103cdf2-bda7-4daf-b2ff-60331bb66ed4",
+    "created_at": "2025-07-12T07:00:14Z",
+    "source": "IBM Cloud",
+    "relevant": true
+  },
+  {
+    "title": "Fortinet unveils laptop at CES, promising better performance but no release date",
+    "body": "Fortinet unveils laptop at CES, promising better performance but no release date.",
+    "published_at": "2025-07-11T23:43:14Z",
+    "id": "https://example.com/aaeae698-7230-48cc-80cc-bf61ba564322",
+    "created_at": "2025-07-11T23:45:14Z",
+    "source": "Fortinet",
+    "relevant": false
+  },
+  {
+    "title": "Google Cloud unveils mechanical keyboard at re:Invent, promising better performance but no",
+    "body": "Google Cloud unveils mechanical keyboard at re:Invent, promising better performance but no release date.",
+    "published_at": "2025-07-11T17:53:14Z",
+    "id": "https://example.com/db6e3a60-fd93-4d50-8a0c-132dda4a74af",
+    "created_at": "2025-07-11T17:55:14Z",
+    "source": "Google Cloud",
+    "relevant": false
+  },
+  {
+    "title": "AWS unveils mechanical keyboard at CES, promising better performance but no release date",
+    "body": "AWS unveils mechanical keyboard at CES, promising better performance but no release date.",
+    "published_at": "2025-07-11T19:33:14Z",
+    "id": "https://example.com/7997d281-d1c3-42f2-8a5f-8063f6f424c7",
+    "created_at": "2025-07-11T19:35:14Z",
+    "source": "AWS",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2024-5808",
+    "body": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2024-5808. Oracle urges customers to upgrade.",
+    "published_at": "2025-07-12T08:53:14Z",
+    "id": "https://example.com/8fe126cf-ceb5-4931-9373-9637351535fb",
+    "created_at": "2025-07-12T08:55:14Z",
+    "source": "Oracle",
+    "relevant": true
+  },
+  {
+    "title": "Red Hat reports a critical outage in us-west-2, affecting services EC2, Lambda",
+    "body": "Red Hat reports a critical outage in us-west-2, affecting services EC2, Lambda. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T05:13:14Z",
+    "id": "https://example.com/9db8ca35-1955-48e7-a739-0174ef253895",
+    "created_at": "2025-07-12T05:15:14Z",
+    "source": "Red Hat",
+    "relevant": true
+  },
+  {
+    "title": "SonicWall confirms a data breach exposing 155K customer records; incident response is unde",
+    "body": "SonicWall confirms a data breach exposing 155K customer records; incident response is underway.",
+    "published_at": "2025-07-12T04:18:14Z",
+    "id": "https://example.com/0adfbaf5-c400-47e1-a8f9-19ee17945cda",
+    "created_at": "2025-07-12T04:20:14Z",
+    "source": "SonicWall",
+    "relevant": true
+  },
+  {
+    "title": "Netflix unveils mechanical keyboard at KubeCon, promising better performance but no releas",
+    "body": "Netflix unveils mechanical keyboard at KubeCon, promising better performance but no release date.",
+    "published_at": "2025-07-11T22:53:14Z",
+    "id": "https://example.com/6409cd1c-44d9-472a-ae07-8bc76e336fa6",
+    "created_at": "2025-07-11T22:55:14Z",
+    "source": "Netflix",
+    "relevant": false
+  },
+  {
+    "title": "Cloudflare's annual conference highlights quantum networking trends but announces no new s",
+    "body": "Cloudflare's annual conference highlights quantum networking trends but announces no new security features.",
+    "published_at": "2025-07-11T17:23:14Z",
+    "id": "https://example.com/7cf5f2ae-e906-4767-a4d7-7c838ddb4c75",
+    "created_at": "2025-07-11T17:25:14Z",
+    "source": "Cloudflare",
+    "relevant": false
+  },
+  {
+    "title": "Cisco's annual conference highlights quantum networking trends but announces no new securi",
+    "body": "Cisco's annual conference highlights quantum networking trends but announces no new security features.",
+    "published_at": "2025-07-11T21:08:14Z",
+    "id": "https://example.com/768df90f-475d-4ed8-92c2-115789e4286b",
+    "created_at": "2025-07-11T21:10:14Z",
+    "source": "Cisco",
+    "relevant": false
+  },
+  {
+    "title": "Zoom is investigating a critical vulnerability (CVE-2024-7615) allowing remote code execut",
+    "body": "Zoom is investigating a critical vulnerability (CVE-2024-7615) allowing remote code execution. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T07:43:14Z",
+    "id": "https://example.com/58e4e362-59ca-4c35-bdbe-dd48ad838b9a",
+    "created_at": "2025-07-12T07:45:14Z",
+    "source": "Zoom",
+    "relevant": true
+  },
+  {
+    "title": "A popular forum thread compares ARM VM to trackpad, debating aesthetics over functionality",
+    "body": "A popular forum thread compares ARM VM to trackpad, debating aesthetics over functionality.",
+    "published_at": "2025-07-12T00:48:14Z",
+    "id": "https://example.com/e5067aeb-2cef-46f4-a9df-0b73db80659f",
+    "created_at": "2025-07-12T00:50:14Z",
+    "source": "Fortinet",
+    "relevant": false
+  },
+  {
+    "title": "Microsoft is investigating a major vulnerability (CVE-2024-9279) allowing data exfiltratio",
+    "body": "Microsoft is investigating a major vulnerability (CVE-2024-9279) allowing data exfiltration. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T09:43:14Z",
+    "id": "https://example.com/e697c6c9-2869-43ba-8956-1c2666ea783d",
+    "created_at": "2025-07-12T09:45:14Z",
+    "source": "Microsoft",
+    "relevant": true
+  },
+  {
+    "title": "Microsoft reports a sev\u20111 outage in europe-west4, affecting services Lambda, Confluence",
+    "body": "Microsoft reports a sev\u20111 outage in europe-west4, affecting services Lambda, Confluence. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T04:13:14Z",
+    "id": "https://example.com/3fe4c61d-baf5-4b7d-92a2-07fe14c9e861",
+    "created_at": "2025-07-12T04:15:14Z",
+    "source": "Microsoft",
+    "relevant": true
+  },
+  {
+    "title": "Netflix's annual conference highlights serverless trends but announces no new security fea",
+    "body": "Netflix's annual conference highlights serverless trends but announces no new security features.",
+    "published_at": "2025-07-11T23:33:14Z",
+    "id": "https://example.com/206885b0-35d0-473b-af70-caf3645914b5",
+    "created_at": "2025-07-11T23:35:14Z",
+    "source": "Netflix",
+    "relevant": false
+  },
+  {
+    "title": "Okta unveils mechanical keyboard at WWDC, promising better performance but no release date",
+    "body": "Okta unveils mechanical keyboard at WWDC, promising better performance but no release date.",
+    "published_at": "2025-07-11T18:48:14Z",
+    "id": "https://example.com/a17dd558-829d-4394-897e-7cb0330ed2d6",
+    "created_at": "2025-07-11T18:50:14Z",
+    "source": "Okta",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2024-5333",
+    "body": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2024-5333. IBM Cloud urges customers to upgrade.",
+    "published_at": "2025-07-12T07:23:14Z",
+    "id": "https://example.com/8b8a5ae4-6261-48f6-888a-9eb5cdb5f55b",
+    "created_at": "2025-07-12T07:25:14Z",
+    "source": "IBM Cloud",
+    "relevant": true
+  },
+  {
+    "title": "Okta unveils mechanical keyboard at re:Invent, promising better performance but no release",
+    "body": "Okta unveils mechanical keyboard at re:Invent, promising better performance but no release date.",
+    "published_at": "2025-07-11T18:18:14Z",
+    "id": "https://example.com/85676492-7853-4bd0-bd82-0cb9cdea2792",
+    "created_at": "2025-07-11T18:20:14Z",
+    "source": "Okta",
+    "relevant": false
+  },
+  {
+    "title": "VMware's annual conference highlights edge computing trends but announces no new security ",
+    "body": "VMware's annual conference highlights edge computing trends but announces no new security features.",
+    "published_at": "2025-07-11T22:23:14Z",
+    "id": "https://example.com/aae12da3-c022-4ff3-ad3b-b2348886afa0",
+    "created_at": "2025-07-11T22:25:14Z",
+    "source": "VMware",
+    "relevant": false
+  },
+  {
+    "title": "Elastic unveils laptop at KubeCon, promising better performance but no release date",
+    "body": "Elastic unveils laptop at KubeCon, promising better performance but no release date.",
+    "published_at": "2025-07-11T22:28:14Z",
+    "id": "https://example.com/7e715506-1a21-4b57-9a24-23c65fc72b64",
+    "created_at": "2025-07-11T22:30:14Z",
+    "source": "Elastic",
+    "relevant": false
+  },
+  {
+    "title": "DigitalOcean reports a critical outage in us-west-2, affecting services Lambda, Outlook",
+    "body": "DigitalOcean reports a critical outage in us-west-2, affecting services Lambda, Outlook. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T08:48:14Z",
+    "id": "https://example.com/104786c6-cbf7-4528-afe5-43a5d1e9a07f",
+    "created_at": "2025-07-12T08:50:14Z",
+    "source": "DigitalOcean",
+    "relevant": true
+  },
+  {
+    "title": "VMware reports a high\u2011severity outage in asia-northeast1, affecting services Jira, Outlook",
+    "body": "VMware reports a high\u2011severity outage in asia-northeast1, affecting services Jira, Outlook. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T05:43:14Z",
+    "id": "https://example.com/7e287581-65aa-4abe-afd0-1dac2f15a8ed",
+    "created_at": "2025-07-12T05:45:14Z",
+    "source": "VMware",
+    "relevant": true
+  },
+  {
+    "title": "A popular forum thread compares mechanical keyboard to tenkeyless board, debating aestheti",
+    "body": "A popular forum thread compares mechanical keyboard to tenkeyless board, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T21:13:14Z",
+    "id": "https://example.com/66df837c-32e3-408a-aedd-c0780236e8a3",
+    "created_at": "2025-07-11T21:15:14Z",
+    "source": "Google Cloud",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2024-4652",
+    "body": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2024-4652. Google Cloud urges customers to upgrade.",
+    "published_at": "2025-07-12T06:48:14Z",
+    "id": "https://example.com/37fbc9ba-cc9c-487b-958b-d181e0451f9b",
+    "created_at": "2025-07-12T06:50:14Z",
+    "source": "Google Cloud",
+    "relevant": true
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2024-5210",
+    "body": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2024-5210. IBM Cloud urges customers to upgrade.",
+    "published_at": "2025-07-12T01:43:14Z",
+    "id": "https://example.com/29df1182-1bab-4a1e-ab93-b6aad36ff2b0",
+    "created_at": "2025-07-12T01:45:14Z",
+    "source": "IBM Cloud",
+    "relevant": true
+  },
+  {
+    "title": "A popular forum thread compares ARM VM to tenkeyless board, debating aesthetics over funct",
+    "body": "A popular forum thread compares ARM VM to tenkeyless board, debating aesthetics over functionality.",
+    "published_at": "2025-07-12T00:43:14Z",
+    "id": "https://example.com/8b94d51a-c336-423a-a9d4-1635e3cffd22",
+    "created_at": "2025-07-12T00:45:14Z",
+    "source": "Okta",
+    "relevant": false
+  },
+  {
+    "title": "NVIDIA reports a sev\u20111 outage in europe-west4, affecting services Lambda, S3",
+    "body": "NVIDIA reports a sev\u20111 outage in europe-west4, affecting services Lambda, S3. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T01:53:14Z",
+    "id": "https://example.com/0f4d3cea-c3f2-45c6-b402-cd57a84bd252",
+    "created_at": "2025-07-12T01:55:14Z",
+    "source": "NVIDIA",
+    "relevant": true
+  },
+  {
+    "title": "Red Hat's annual conference highlights serverless trends but announces no new security fea",
+    "body": "Red Hat's annual conference highlights serverless trends but announces no new security features.",
+    "published_at": "2025-07-11T17:38:14Z",
+    "id": "https://example.com/9e200a95-9958-40ee-b6ab-1c54e06340d5",
+    "created_at": "2025-07-11T17:40:14Z",
+    "source": "Red Hat",
+    "relevant": false
+  },
+  {
+    "title": "A popular forum thread compares laptop to tenkeyless board, debating aesthetics over funct",
+    "body": "A popular forum thread compares laptop to tenkeyless board, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T21:53:14Z",
+    "id": "https://example.com/500fdf6b-962e-4d60-b38d-4c5541190423",
+    "created_at": "2025-07-11T21:55:14Z",
+    "source": "Elastic",
+    "relevant": false
+  },
+  {
+    "title": "Elastic is investigating a critical vulnerability (CVE-2025-9238) allowing data exfiltrati",
+    "body": "Elastic is investigating a critical vulnerability (CVE-2025-9238) allowing data exfiltration. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T07:48:14Z",
+    "id": "https://example.com/12977c1b-0bc7-4583-8841-832703b84fc8",
+    "created_at": "2025-07-12T07:50:14Z",
+    "source": "Elastic",
+    "relevant": true
+  },
+  {
+    "title": "A popular forum thread compares ARM VM to tenkeyless board, debating aesthetics over funct",
+    "body": "A popular forum thread compares ARM VM to tenkeyless board, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T23:28:14Z",
+    "id": "https://example.com/9359b8c4-fb0a-4d75-829e-c8d85ac235bd",
+    "created_at": "2025-07-11T23:30:14Z",
+    "source": "Oracle",
+    "relevant": false
+  },
+  {
+    "title": "Google Cloud is investigating a sev\u20111 vulnerability (CVE-2024-2476) allowing unauthenticat",
+    "body": "Google Cloud is investigating a sev\u20111 vulnerability (CVE-2024-2476) allowing unauthenticated access. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T01:48:14Z",
+    "id": "https://example.com/fae700b1-a840-4083-b8d8-4c55939b61ae",
+    "created_at": "2025-07-12T01:50:14Z",
+    "source": "Google Cloud",
+    "relevant": true
+  },
+  {
+    "title": "NVIDIA's annual conference highlights serverless trends but announces no new security feat",
+    "body": "NVIDIA's annual conference highlights serverless trends but announces no new security features.",
+    "published_at": "2025-07-11T17:58:14Z",
+    "id": "https://example.com/b89dee84-1dd1-4acf-bb98-68dcd8dc5d0c",
+    "created_at": "2025-07-11T18:00:14Z",
+    "source": "NVIDIA",
+    "relevant": false
+  },
+  {
+    "title": "A popular forum thread compares foldable phone to tenkeyless board, debating aesthetics ov",
+    "body": "A popular forum thread compares foldable phone to tenkeyless board, debating aesthetics over functionality.",
+    "published_at": "2025-07-12T01:13:14Z",
+    "id": "https://example.com/5481d099-6fc9-49e8-b7fa-0ff69ecfedde",
+    "created_at": "2025-07-12T01:15:14Z",
+    "source": "Apple",
+    "relevant": false
+  },
+  {
+    "title": "DigitalOcean confirms a data breach exposing 62K customer records; incident response is un",
+    "body": "DigitalOcean confirms a data breach exposing 62K customer records; incident response is underway.",
+    "published_at": "2025-07-12T08:33:14Z",
+    "id": "https://example.com/a66cf27f-feb7-4850-8ab7-9db814684097",
+    "created_at": "2025-07-12T08:35:14Z",
+    "source": "DigitalOcean",
+    "relevant": true
+  },
+  {
+    "title": "Red Hat is investigating a major vulnerability (CVE-2025-5669) allowing privilege escalati",
+    "body": "Red Hat is investigating a major vulnerability (CVE-2025-5669) allowing privilege escalation. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T07:28:14Z",
+    "id": "https://example.com/e12f5c3e-dc80-445b-a393-ecffa6338f07",
+    "created_at": "2025-07-12T07:30:14Z",
+    "source": "Red Hat",
+    "relevant": true
+  },
+  {
+    "title": "Cisco reports a critical outage in global, affecting services RDS, Teams",
+    "body": "Cisco reports a critical outage in global, affecting services RDS, Teams. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T08:23:14Z",
+    "id": "https://example.com/f0b967bf-59ba-461f-b102-eb5e202fbf55",
+    "created_at": "2025-07-12T08:25:14Z",
+    "source": "Cisco",
+    "relevant": true
+  },
+  {
+    "title": "Zoom reports a major outage in us-west-2, affecting services Confluence, Lambda",
+    "body": "Zoom reports a major outage in us-west-2, affecting services Confluence, Lambda. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T02:13:14Z",
+    "id": "https://example.com/d674c0c7-6753-414b-8460-1817d344816f",
+    "created_at": "2025-07-12T02:15:14Z",
+    "source": "Zoom",
+    "relevant": true
+  },
+  {
+    "title": "AWS adds collaborative cursors in the latest update; no security fixes are included",
+    "body": "AWS adds collaborative cursors in the latest update; no security fixes are included.",
+    "published_at": "2025-07-12T00:03:14Z",
+    "id": "https://example.com/c458619f-c740-44b1-a9a0-aefb68455346",
+    "created_at": "2025-07-12T00:05:14Z",
+    "source": "AWS",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2025-9280",
+    "body": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2025-9280. SonicWall urges customers to upgrade.",
+    "published_at": "2025-07-12T07:18:14Z",
+    "id": "https://example.com/dc686f57-27d7-4434-b2b5-43ff0d6b7a33",
+    "created_at": "2025-07-12T07:20:14Z",
+    "source": "SonicWall",
+    "relevant": true
+  },
+  {
+    "title": "Google Cloud unveils laptop at re:Invent, promising better performance but no release date",
+    "body": "Google Cloud unveils laptop at re:Invent, promising better performance but no release date.",
+    "published_at": "2025-07-12T00:18:14Z",
+    "id": "https://example.com/bbbe3239-1781-4a5e-b227-fb6d971c708f",
+    "created_at": "2025-07-12T00:20:14Z",
+    "source": "Google Cloud",
+    "relevant": false
+  },
+  {
+    "title": "DigitalOcean is investigating a sev\u20111 vulnerability (CVE-2025-1319) allowing remote code e",
+    "body": "DigitalOcean is investigating a sev\u20111 vulnerability (CVE-2025-1319) allowing remote code execution. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T08:43:14Z",
+    "id": "https://example.com/46d89a9a-aa0f-4655-b5c5-ef4bbba2b531",
+    "created_at": "2025-07-12T08:45:14Z",
+    "source": "DigitalOcean",
+    "relevant": true
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting FortiOS, weaponizing CVE-2025-4777",
+    "body": "Researchers discovered a new exploit kit targeting FortiOS, weaponizing CVE-2025-4777. Google Cloud urges customers to upgrade.",
+    "published_at": "2025-07-12T04:23:14Z",
+    "id": "https://example.com/49b4a72f-e75e-4957-826b-88b4ae72cf6b",
+    "created_at": "2025-07-12T04:25:14Z",
+    "source": "Google Cloud",
+    "relevant": true
+  },
+  {
+    "title": "DigitalOcean confirms a data breach exposing 321K customer records; incident response is u",
+    "body": "DigitalOcean confirms a data breach exposing 321K customer records; incident response is underway.",
+    "published_at": "2025-07-12T05:53:14Z",
+    "id": "https://example.com/af555c84-92b0-467a-b066-07066cec9e8e",
+    "created_at": "2025-07-12T05:55:14Z",
+    "source": "DigitalOcean",
+    "relevant": true
+  },
+  {
+    "title": "A popular forum thread compares foldable phone to trackpad, debating aesthetics over funct",
+    "body": "A popular forum thread compares foldable phone to trackpad, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T19:43:14Z",
+    "id": "https://example.com/58a32dea-548c-493a-828e-5d8ed34948ed",
+    "created_at": "2025-07-11T19:45:14Z",
+    "source": "Google Cloud",
+    "relevant": false
+  },
+  {
+    "title": "VMware confirms a data breach exposing 270K customer records; incident response is underwa",
+    "body": "VMware confirms a data breach exposing 270K customer records; incident response is underway.",
+    "published_at": "2025-07-12T02:38:14Z",
+    "id": "https://example.com/b4044554-00bc-4437-8d69-8aa861a1800f",
+    "created_at": "2025-07-12T02:40:14Z",
+    "source": "VMware",
+    "relevant": true
+  },
+  {
+    "title": "Steam unveils foldable phone at re:Invent, promising better performance but no release dat",
+    "body": "Steam unveils foldable phone at re:Invent, promising better performance but no release date.",
+    "published_at": "2025-07-11T18:08:14Z",
+    "id": "https://example.com/8dbcc494-d869-479f-a739-ba38c5a6fa3b",
+    "created_at": "2025-07-11T18:10:14Z",
+    "source": "Steam",
+    "relevant": false
+  },
+  {
+    "title": "A popular forum thread compares laptop to tenkeyless board, debating aesthetics over funct",
+    "body": "A popular forum thread compares laptop to tenkeyless board, debating aesthetics over functionality.",
+    "published_at": "2025-07-12T01:28:14Z",
+    "id": "https://example.com/350cacd2-989e-4f13-8a0e-81e765e12d96",
+    "created_at": "2025-07-12T01:30:14Z",
+    "source": "Intel",
+    "relevant": false
+  },
+  {
+    "title": "VMware's annual conference highlights serverless trends but announces no new security feat",
+    "body": "VMware's annual conference highlights serverless trends but announces no new security features.",
+    "published_at": "2025-07-11T17:43:14Z",
+    "id": "https://example.com/bbced061-d5c8-4025-a413-c62d286cc3e1",
+    "created_at": "2025-07-11T17:45:14Z",
+    "source": "VMware",
+    "relevant": false
+  },
+  {
+    "title": "IBM Cloud's annual conference highlights edge computing trends but announces no new securi",
+    "body": "IBM Cloud's annual conference highlights edge computing trends but announces no new security features.",
+    "published_at": "2025-07-11T20:38:14Z",
+    "id": "https://example.com/139c69fc-b605-466e-a046-dcd087db54d7",
+    "created_at": "2025-07-11T20:40:14Z",
+    "source": "IBM Cloud",
+    "relevant": false
+  },
+  {
+    "title": "A popular forum thread compares mechanical keyboard to tenkeyless board, debating aestheti",
+    "body": "A popular forum thread compares mechanical keyboard to tenkeyless board, debating aesthetics over functionality.",
+    "published_at": "2025-07-12T00:08:14Z",
+    "id": "https://example.com/9facdbdf-36eb-41af-aa8e-1f95140eaa57",
+    "created_at": "2025-07-12T00:10:14Z",
+    "source": "Fortinet",
+    "relevant": false
+  },
+  {
+    "title": "A popular forum thread compares ARM VM to optical mouse, debating aesthetics over function",
+    "body": "A popular forum thread compares ARM VM to optical mouse, debating aesthetics over functionality.",
+    "published_at": "2025-07-12T01:18:14Z",
+    "id": "https://example.com/b09296e2-0ddc-4e29-8a0a-ae4b7dc0c1ab",
+    "created_at": "2025-07-12T01:20:14Z",
+    "source": "Oracle",
+    "relevant": false
+  },
+  {
+    "title": "Azure confirms a data breach exposing 316K customer records; incident response is underway",
+    "body": "Azure confirms a data breach exposing 316K customer records; incident response is underway.",
+    "published_at": "2025-07-12T04:53:14Z",
+    "id": "https://example.com/a9e98ad3-3407-46c2-b293-62e45bf74bba",
+    "created_at": "2025-07-12T04:55:14Z",
+    "source": "Azure",
+    "relevant": true
+  },
+  {
+    "title": "NVIDIA reports a critical outage in asia-northeast1, affecting services Lambda, Teams",
+    "body": "NVIDIA reports a critical outage in asia-northeast1, affecting services Lambda, Teams. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T02:23:14Z",
+    "id": "https://example.com/b1f6e49a-2acd-4372-9ab1-809600445f34",
+    "created_at": "2025-07-12T02:25:14Z",
+    "source": "NVIDIA",
+    "relevant": true
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2025-2775",
+    "body": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2025-2775. Red Hat urges customers to upgrade.",
+    "published_at": "2025-07-12T01:33:14Z",
+    "id": "https://example.com/ed5cf239-f68f-4e03-99e4-5d36319666f8",
+    "created_at": "2025-07-12T01:35:14Z",
+    "source": "Red Hat",
+    "relevant": true
+  },
+  {
+    "title": "Cloudflare is investigating a major vulnerability (CVE-2025-5198) allowing unauthenticated",
+    "body": "Cloudflare is investigating a major vulnerability (CVE-2025-5198) allowing unauthenticated access. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T05:08:14Z",
+    "id": "https://example.com/e19d0d1c-7f34-491d-a67d-7f8afa81ad48",
+    "created_at": "2025-07-12T05:10:14Z",
+    "source": "Cloudflare",
+    "relevant": true
+  },
+  {
+    "title": "Steam's annual conference highlights AI governance trends but announces no new security fe",
+    "body": "Steam's annual conference highlights AI governance trends but announces no new security features.",
+    "published_at": "2025-07-11T20:03:14Z",
+    "id": "https://example.com/25a78ad9-ed97-4f90-a4ed-63f79f956caf",
+    "created_at": "2025-07-11T20:05:14Z",
+    "source": "Steam",
+    "relevant": false
+  },
+  {
+    "title": "Elastic is investigating a major vulnerability (CVE-2024-6168) allowing configuration bypa",
+    "body": "Elastic is investigating a major vulnerability (CVE-2024-6168) allowing configuration bypass. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T09:13:14Z",
+    "id": "https://example.com/5030f552-db45-4817-937b-a77975c1d88b",
+    "created_at": "2025-07-12T09:15:14Z",
+    "source": "Elastic",
+    "relevant": true
+  },
+  {
+    "title": "Azure confirms a data breach exposing 79K customer records; incident response is underway",
+    "body": "Azure confirms a data breach exposing 79K customer records; incident response is underway.",
+    "published_at": "2025-07-12T09:03:14Z",
+    "id": "https://example.com/e6d50e5e-6c08-427f-bd49-f46804ffbf38",
+    "created_at": "2025-07-12T09:05:14Z",
+    "source": "Azure",
+    "relevant": true
+  },
+  {
+    "title": "NVIDIA is investigating a critical vulnerability (CVE-2025-9728) allowing configuration by",
+    "body": "NVIDIA is investigating a critical vulnerability (CVE-2025-9728) allowing configuration bypass. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T04:58:14Z",
+    "id": "https://example.com/2d87f0bc-7253-46c4-bdcb-816374a29c46",
+    "created_at": "2025-07-12T05:00:14Z",
+    "source": "NVIDIA",
+    "relevant": true
+  },
+  {
+    "title": "Elastic is investigating a sev\u20111 vulnerability (CVE-2025-7141) allowing configuration bypa",
+    "body": "Elastic is investigating a sev\u20111 vulnerability (CVE-2025-7141) allowing configuration bypass. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T02:18:14Z",
+    "id": "https://example.com/d2443489-dc70-45b3-9f18-da2547a1f6fd",
+    "created_at": "2025-07-12T02:20:14Z",
+    "source": "Elastic",
+    "relevant": true
+  },
+  {
+    "title": "Fortinet's annual conference highlights quantum networking trends but announces no new sec",
+    "body": "Fortinet's annual conference highlights quantum networking trends but announces no new security features.",
+    "published_at": "2025-07-11T18:33:14Z",
+    "id": "https://example.com/a1917ef7-1320-42bb-8adb-6f2f71005891",
+    "created_at": "2025-07-11T18:35:14Z",
+    "source": "Fortinet",
+    "relevant": false
+  },
+  {
+    "title": "Google Cloud is investigating a major vulnerability (CVE-2025-3529) allowing remote code e",
+    "body": "Google Cloud is investigating a major vulnerability (CVE-2025-3529) allowing remote code execution. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T02:33:14Z",
+    "id": "https://example.com/65c4a1cd-4486-49e6-9287-81e48d15c7e7",
+    "created_at": "2025-07-12T02:35:14Z",
+    "source": "Google Cloud",
+    "relevant": true
+  },
+  {
+    "title": "A popular forum thread compares mechanical keyboard to trackpad, debating aesthetics over ",
+    "body": "A popular forum thread compares mechanical keyboard to trackpad, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T21:43:14Z",
+    "id": "https://example.com/e28b88a5-336c-416d-8348-427b8ab46c17",
+    "created_at": "2025-07-11T21:45:14Z",
+    "source": "Oracle",
+    "relevant": false
+  },
+  {
+    "title": "Google Cloud confirms a data breach exposing 409K customer records; incident response is u",
+    "body": "Google Cloud confirms a data breach exposing 409K customer records; incident response is underway.",
+    "published_at": "2025-07-12T04:43:14Z",
+    "id": "https://example.com/b77d9164-c3ed-40c2-a4d8-c14f4da57a35",
+    "created_at": "2025-07-12T04:45:14Z",
+    "source": "Google Cloud",
+    "relevant": true
+  },
+  {
+    "title": "Okta is investigating a critical vulnerability (CVE-2025-6663) allowing unauthenticated ac",
+    "body": "Okta is investigating a critical vulnerability (CVE-2025-6663) allowing unauthenticated access. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T06:38:14Z",
+    "id": "https://example.com/0d217a21-288a-427f-9e1a-19fd842e628c",
+    "created_at": "2025-07-12T06:40:14Z",
+    "source": "Okta",
+    "relevant": true
+  },
+  {
+    "title": "Steam unveils ARM VM at re:Invent, promising better performance but no release date",
+    "body": "Steam unveils ARM VM at re:Invent, promising better performance but no release date.",
+    "published_at": "2025-07-11T23:58:14Z",
+    "id": "https://example.com/3e8464cd-fc50-4fac-8b27-40c521459265",
+    "created_at": "2025-07-12T00:00:14Z",
+    "source": "Steam",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting FortiOS, weaponizing CVE-2025-9785",
+    "body": "Researchers discovered a new exploit kit targeting FortiOS, weaponizing CVE-2025-9785. Fortinet urges customers to upgrade.",
+    "published_at": "2025-07-12T06:43:14Z",
+    "id": "https://example.com/b8607228-33cd-45b1-9b99-ea2f35b73091",
+    "created_at": "2025-07-12T06:45:14Z",
+    "source": "Fortinet",
+    "relevant": true
+  },
+  {
+    "title": "Fortinet confirms a data breach exposing 128K customer records; incident response is under",
+    "body": "Fortinet confirms a data breach exposing 128K customer records; incident response is underway.",
+    "published_at": "2025-07-12T04:03:14Z",
+    "id": "https://example.com/b32ffa16-e493-455f-8562-74c6a81ead93",
+    "created_at": "2025-07-12T04:05:14Z",
+    "source": "Fortinet",
+    "relevant": true
+  },
+  {
+    "title": "Cisco reports a sev\u20111 outage in asia-northeast1, affecting services S3, EC2",
+    "body": "Cisco reports a sev\u20111 outage in asia-northeast1, affecting services S3, EC2. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T03:08:14Z",
+    "id": "https://example.com/7e61b963-8e2a-4c99-ae4b-4f4db0692da6",
+    "created_at": "2025-07-12T03:10:14Z",
+    "source": "Cisco",
+    "relevant": true
+  },
+  {
+    "title": "IBM Cloud reports a high\u2011severity outage in us-east-1, affecting services Teams, RDS",
+    "body": "IBM Cloud reports a high\u2011severity outage in us-east-1, affecting services Teams, RDS. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T04:33:14Z",
+    "id": "https://example.com/31eed393-e445-4f4b-a4cb-b974c1bee76f",
+    "created_at": "2025-07-12T04:35:14Z",
+    "source": "IBM Cloud",
+    "relevant": true
+  },
+  {
+    "title": "A popular forum thread compares mechanical keyboard to trackpad, debating aesthetics over ",
+    "body": "A popular forum thread compares mechanical keyboard to trackpad, debating aesthetics over functionality.",
+    "published_at": "2025-07-12T00:33:14Z",
+    "id": "https://example.com/db8c0630-555a-4d02-847b-b8f129aa6423",
+    "created_at": "2025-07-12T00:35:14Z",
+    "source": "Microsoft",
+    "relevant": false
+  },
+  {
+    "title": "Slack's annual conference highlights quantum networking trends but announces no new securi",
+    "body": "Slack's annual conference highlights quantum networking trends but announces no new security features.",
+    "published_at": "2025-07-11T20:33:14Z",
+    "id": "https://example.com/eac3da61-871d-4b66-be42-ade52f2df942",
+    "created_at": "2025-07-11T20:35:14Z",
+    "source": "Slack",
+    "relevant": false
+  },
+  {
+    "title": "Red Hat adds new emoji pack in the latest update; no security fixes are included",
+    "body": "Red Hat adds new emoji pack in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T23:23:14Z",
+    "id": "https://example.com/15a49e0d-31ad-43a6-9f4c-85c90cf5874b",
+    "created_at": "2025-07-11T23:25:14Z",
+    "source": "Red Hat",
+    "relevant": false
+  },
+  {
+    "title": "Azure reports a high\u2011severity outage in asia-northeast1, affecting services Outlook, RDS",
+    "body": "Azure reports a high\u2011severity outage in asia-northeast1, affecting services Outlook, RDS. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T05:23:14Z",
+    "id": "https://example.com/b26ec39d-9348-469c-ba8f-890a51d485db",
+    "created_at": "2025-07-12T05:25:14Z",
+    "source": "Azure",
+    "relevant": true
+  },
+  {
+    "title": "Twitter unveils foldable phone at WWDC, promising better performance but no release date",
+    "body": "Twitter unveils foldable phone at WWDC, promising better performance but no release date.",
+    "published_at": "2025-07-12T00:28:14Z",
+    "id": "https://example.com/5a55e9b4-92b8-46f9-8119-f5e765297b38",
+    "created_at": "2025-07-12T00:30:14Z",
+    "source": "Twitter",
+    "relevant": false
+  },
+  {
+    "title": "AWS adds animated stickers in the latest update; no security fixes are included",
+    "body": "AWS adds animated stickers in the latest update; no security fixes are included.",
+    "published_at": "2025-07-12T00:58:14Z",
+    "id": "https://example.com/a5e398d6-9994-4f21-9177-69d139fef640",
+    "created_at": "2025-07-12T01:00:14Z",
+    "source": "AWS",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2024-6147",
+    "body": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2024-6147. DigitalOcean urges customers to upgrade.",
+    "published_at": "2025-07-12T07:38:14Z",
+    "id": "https://example.com/99b4075b-d0f5-4cd5-8fde-c44491a9e264",
+    "created_at": "2025-07-12T07:40:14Z",
+    "source": "DigitalOcean",
+    "relevant": true
+  },
+  {
+    "title": "DigitalOcean reports a critical outage in global, affecting services Teams, EC2",
+    "body": "DigitalOcean reports a critical outage in global, affecting services Teams, EC2. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T02:53:14Z",
+    "id": "https://example.com/99e6ba1d-f6d1-44dc-a115-6ef98ffa3809",
+    "created_at": "2025-07-12T02:55:14Z",
+    "source": "DigitalOcean",
+    "relevant": true
+  },
+  {
+    "title": "NVIDIA's annual conference highlights serverless trends but announces no new security feat",
+    "body": "NVIDIA's annual conference highlights serverless trends but announces no new security features.",
+    "published_at": "2025-07-11T21:23:14Z",
+    "id": "https://example.com/bc53daad-0af0-4178-8877-1cfca1ee0de3",
+    "created_at": "2025-07-11T21:25:14Z",
+    "source": "NVIDIA",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting FortiOS, weaponizing CVE-2025-2880",
+    "body": "Researchers discovered a new exploit kit targeting FortiOS, weaponizing CVE-2025-2880. Atlassian urges customers to upgrade.",
+    "published_at": "2025-07-12T03:43:14Z",
+    "id": "https://example.com/abb70b15-3ee0-4f93-926d-bd37a309866e",
+    "created_at": "2025-07-12T03:45:14Z",
+    "source": "Atlassian",
+    "relevant": true
+  },
+  {
+    "title": "Fortinet reports a major outage in asia-northeast1, affecting services EC2, Teams",
+    "body": "Fortinet reports a major outage in asia-northeast1, affecting services EC2, Teams. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T01:38:14Z",
+    "id": "https://example.com/969d42c8-e294-40b0-bee4-9953ede69128",
+    "created_at": "2025-07-12T01:40:14Z",
+    "source": "Fortinet",
+    "relevant": true
+  },
+  {
+    "title": "Apple's annual conference highlights serverless trends but announces no new security featu",
+    "body": "Apple's annual conference highlights serverless trends but announces no new security features.",
+    "published_at": "2025-07-11T22:13:14Z",
+    "id": "https://example.com/b3a0d99b-355b-4f1e-b005-d5b287c1b204",
+    "created_at": "2025-07-11T22:15:14Z",
+    "source": "Apple",
+    "relevant": false
+  },
+  {
+    "title": "A popular forum thread compares laptop to tenkeyless board, debating aesthetics over funct",
+    "body": "A popular forum thread compares laptop to tenkeyless board, debating aesthetics over functionality.",
+    "published_at": "2025-07-12T00:23:14Z",
+    "id": "https://example.com/ee9ef1a3-de10-4a28-9d32-094e01b5edc0",
+    "created_at": "2025-07-12T00:25:14Z",
+    "source": "Google Cloud",
+    "relevant": false
+  },
+  {
+    "title": "Zoom confirms a data breach exposing 349K customer records; incident response is underway",
+    "body": "Zoom confirms a data breach exposing 349K customer records; incident response is underway.",
+    "published_at": "2025-07-12T08:58:14Z",
+    "id": "https://example.com/eb82975c-61f8-4dec-b9c5-7b01486fd418",
+    "created_at": "2025-07-12T09:00:14Z",
+    "source": "Zoom",
+    "relevant": true
+  },
+  {
+    "title": "Fortinet confirms a data breach exposing 499K customer records; incident response is under",
+    "body": "Fortinet confirms a data breach exposing 499K customer records; incident response is underway.",
+    "published_at": "2025-07-12T09:33:14Z",
+    "id": "https://example.com/33be263b-6c84-42b2-8530-24d117669a07",
+    "created_at": "2025-07-12T09:35:14Z",
+    "source": "Fortinet",
+    "relevant": true
+  },
+  {
+    "title": "Google Cloud adds sidebar color themes in the latest update; no security fixes are include",
+    "body": "Google Cloud adds sidebar color themes in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T21:28:14Z",
+    "id": "https://example.com/4667cbc4-51c7-4ad6-8dab-43380028eb70",
+    "created_at": "2025-07-11T21:30:14Z",
+    "source": "Google Cloud",
+    "relevant": false
+  },
+  {
+    "title": "Google Cloud adds new emoji pack in the latest update; no security fixes are included",
+    "body": "Google Cloud adds new emoji pack in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T20:08:14Z",
+    "id": "https://example.com/cb28b283-58ca-45d2-9263-6164ff8cbb6f",
+    "created_at": "2025-07-11T20:10:14Z",
+    "source": "Google Cloud",
+    "relevant": false
+  },
+  {
+    "title": "Atlassian is investigating a high\u2011severity vulnerability (CVE-2025-8428) allowing unauthen",
+    "body": "Atlassian is investigating a high\u2011severity vulnerability (CVE-2025-8428) allowing unauthenticated access. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T09:23:14Z",
+    "id": "https://example.com/a535dab7-a62f-42c0-9274-27e5d87d627b",
+    "created_at": "2025-07-12T09:25:14Z",
+    "source": "Atlassian",
+    "relevant": true
+  },
+  {
+    "title": "A popular forum thread compares mechanical keyboard to trackpad, debating aesthetics over ",
+    "body": "A popular forum thread compares mechanical keyboard to trackpad, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T22:33:14Z",
+    "id": "https://example.com/5cfbfb76-bfae-4318-9139-71bd6f7a7079",
+    "created_at": "2025-07-11T22:35:14Z",
+    "source": "Microsoft",
+    "relevant": false
+  },
+  {
+    "title": "Slack unveils laptop at Computex, promising better performance but no release date",
+    "body": "Slack unveils laptop at Computex, promising better performance but no release date.",
+    "published_at": "2025-07-12T00:53:14Z",
+    "id": "https://example.com/719e3359-8993-41ae-a9ab-ee7d12e5e57e",
+    "created_at": "2025-07-12T00:55:14Z",
+    "source": "Slack",
+    "relevant": false
+  },
+  {
+    "title": "Elastic adds AI\u2011generated backgrounds in the latest update; no security fixes are included",
+    "body": "Elastic adds AI\u2011generated backgrounds in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T23:13:14Z",
+    "id": "https://example.com/34e30e7b-dfa8-4937-80cb-a1af420b239d",
+    "created_at": "2025-07-11T23:15:14Z",
+    "source": "Elastic",
+    "relevant": false
+  },
+  {
+    "title": "AWS's annual conference highlights serverless trends but announces no new security feature",
+    "body": "AWS's annual conference highlights serverless trends but announces no new security features.",
+    "published_at": "2025-07-11T23:03:14Z",
+    "id": "https://example.com/3740ca53-304a-4202-a672-71c581837579",
+    "created_at": "2025-07-11T23:05:14Z",
+    "source": "AWS",
+    "relevant": false
+  },
+  {
+    "title": "Red Hat adds animated stickers in the latest update; no security fixes are included",
+    "body": "Red Hat adds animated stickers in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T20:43:14Z",
+    "id": "https://example.com/1ab69d2a-8182-48fa-b76d-571d7987fb6d",
+    "created_at": "2025-07-11T20:45:14Z",
+    "source": "Red Hat",
+    "relevant": false
+  },
+  {
+    "title": "Atlassian's annual conference highlights serverless trends but announces no new security f",
+    "body": "Atlassian's annual conference highlights serverless trends but announces no new security features.",
+    "published_at": "2025-07-11T18:58:14Z",
+    "id": "https://example.com/e3e9a2a2-631a-4893-a817-5d0694554c4a",
+    "created_at": "2025-07-11T19:00:14Z",
+    "source": "Atlassian",
+    "relevant": false
+  },
+  {
+    "title": "IBM Cloud unveils laptop at CES, promising better performance but no release date",
+    "body": "IBM Cloud unveils laptop at CES, promising better performance but no release date.",
+    "published_at": "2025-07-11T19:48:14Z",
+    "id": "https://example.com/8f1aabff-2416-4532-bc6b-827bbb4e3c65",
+    "created_at": "2025-07-11T19:50:14Z",
+    "source": "IBM Cloud",
+    "relevant": false
+  },
+  {
+    "title": "NVIDIA confirms a data breach exposing 234K customer records; incident response is underwa",
+    "body": "NVIDIA confirms a data breach exposing 234K customer records; incident response is underway.",
+    "published_at": "2025-07-12T02:48:14Z",
+    "id": "https://example.com/58f4c689-778d-45c2-9873-4b9cad3cd01d",
+    "created_at": "2025-07-12T02:50:14Z",
+    "source": "NVIDIA",
+    "relevant": true
+  },
+  {
+    "title": "IBM Cloud is investigating a critical vulnerability (CVE-2024-2528) allowing privilege esc",
+    "body": "IBM Cloud is investigating a critical vulnerability (CVE-2024-2528) allowing privilege escalation. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T08:03:14Z",
+    "id": "https://example.com/12fe059f-315e-4f69-b7cb-05749a4c4e18",
+    "created_at": "2025-07-12T08:05:14Z",
+    "source": "IBM Cloud",
+    "relevant": true
+  },
+  {
+    "title": "Azure confirms a data breach exposing 99K customer records; incident response is underway",
+    "body": "Azure confirms a data breach exposing 99K customer records; incident response is underway.",
+    "published_at": "2025-07-12T08:13:14Z",
+    "id": "https://example.com/eadcbe64-fa32-4ec0-a1ce-d74e26635300",
+    "created_at": "2025-07-12T08:15:14Z",
+    "source": "Azure",
+    "relevant": true
+  },
+  {
+    "title": "Red Hat's annual conference highlights serverless trends but announces no new security fea",
+    "body": "Red Hat's annual conference highlights serverless trends but announces no new security features.",
+    "published_at": "2025-07-11T17:33:14Z",
+    "id": "https://example.com/727d12b9-d5e7-40dd-832b-3930e7b1761c",
+    "created_at": "2025-07-11T17:35:14Z",
+    "source": "Red Hat",
+    "relevant": false
+  },
+  {
+    "title": "Azure adds collaborative cursors in the latest update; no security fixes are included",
+    "body": "Azure adds collaborative cursors in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T23:48:14Z",
+    "id": "https://example.com/6880ff67-9a1a-4b69-a045-112251bf7ff4",
+    "created_at": "2025-07-11T23:50:14Z",
+    "source": "Azure",
+    "relevant": false
+  },
+  {
+    "title": "IBM Cloud confirms a data breach exposing 47K customer records; incident response is under",
+    "body": "IBM Cloud confirms a data breach exposing 47K customer records; incident response is underway.",
+    "published_at": "2025-07-12T03:33:14Z",
+    "id": "https://example.com/39b1da57-1c72-4c8b-b0a3-7857e816cc30",
+    "created_at": "2025-07-12T03:35:14Z",
+    "source": "IBM Cloud",
+    "relevant": true
+  },
+  {
+    "title": "Zoom is investigating a sev\u20111 vulnerability (CVE-2025-2530) allowing privilege escalation",
+    "body": "Zoom is investigating a sev\u20111 vulnerability (CVE-2025-2530) allowing privilege escalation. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T06:13:14Z",
+    "id": "https://example.com/8a23560c-46f1-4d20-b709-4f88821345d3",
+    "created_at": "2025-07-12T06:15:14Z",
+    "source": "Zoom",
+    "relevant": true
+  },
+  {
+    "title": "IBM Cloud confirms a data breach exposing 383K customer records; incident response is unde",
+    "body": "IBM Cloud confirms a data breach exposing 383K customer records; incident response is underway.",
+    "published_at": "2025-07-12T07:53:14Z",
+    "id": "https://example.com/d0e3c218-492d-4d0c-8ba0-e9777f63eab1",
+    "created_at": "2025-07-12T07:55:14Z",
+    "source": "IBM Cloud",
+    "relevant": true
+  },
+  {
+    "title": "Apple's annual conference highlights quantum networking trends but announces no new securi",
+    "body": "Apple's annual conference highlights quantum networking trends but announces no new security features.",
+    "published_at": "2025-07-11T21:58:14Z",
+    "id": "https://example.com/9d99365c-9507-46b2-94d6-e3cc2bd92478",
+    "created_at": "2025-07-11T22:00:14Z",
+    "source": "Apple",
+    "relevant": false
+  },
+  {
+    "title": "A popular forum thread compares foldable phone to optical mouse, debating aesthetics over ",
+    "body": "A popular forum thread compares foldable phone to optical mouse, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T21:03:14Z",
+    "id": "https://example.com/9dc522b5-41c8-4963-aab5-a320cdf4d445",
+    "created_at": "2025-07-11T21:05:14Z",
+    "source": "Cisco",
+    "relevant": false
+  },
+  {
+    "title": "Oracle confirms a data breach exposing 292K customer records; incident response is underwa",
+    "body": "Oracle confirms a data breach exposing 292K customer records; incident response is underway.",
+    "published_at": "2025-07-12T03:58:14Z",
+    "id": "https://example.com/952e99c6-c616-4f1c-b526-a95092c8b9f1",
+    "created_at": "2025-07-12T04:00:14Z",
+    "source": "Oracle",
+    "relevant": true
+  },
+  {
+    "title": "Cisco reports a high\u2011severity outage in asia-northeast1, affecting services Confluence, EC",
+    "body": "Cisco reports a high\u2011severity outage in asia-northeast1, affecting services Confluence, EC2. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T05:38:14Z",
+    "id": "https://example.com/34de051f-cea6-42cb-a22f-ebbe6109ff65",
+    "created_at": "2025-07-12T05:40:14Z",
+    "source": "Cisco",
+    "relevant": true
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2025-9698",
+    "body": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2025-9698. Atlassian urges customers to upgrade.",
+    "published_at": "2025-07-12T04:28:14Z",
+    "id": "https://example.com/156c6f2d-da34-41b4-a8ae-ec1e8a728163",
+    "created_at": "2025-07-12T04:30:14Z",
+    "source": "Atlassian",
+    "relevant": true
+  },
+  {
+    "title": "SonicWall confirms a data breach exposing 414K customer records; incident response is unde",
+    "body": "SonicWall confirms a data breach exposing 414K customer records; incident response is underway.",
+    "published_at": "2025-07-12T08:08:14Z",
+    "id": "https://example.com/5c241743-7e6e-49d2-9cc7-38ae202149e0",
+    "created_at": "2025-07-12T08:10:14Z",
+    "source": "SonicWall",
+    "relevant": true
+  },
+  {
+    "title": "Microsoft confirms a data breach exposing 37K customer records; incident response is under",
+    "body": "Microsoft confirms a data breach exposing 37K customer records; incident response is underway.",
+    "published_at": "2025-07-12T03:48:14Z",
+    "id": "https://example.com/f1989a51-fe7e-4ed9-ba12-56552c69d367",
+    "created_at": "2025-07-12T03:50:14Z",
+    "source": "Microsoft",
+    "relevant": true
+  },
+  {
+    "title": "GitHub adds new emoji pack in the latest update; no security fixes are included",
+    "body": "GitHub adds new emoji pack in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T21:48:14Z",
+    "id": "https://example.com/ba7f1b57-657d-46d9-b808-d250929ef6df",
+    "created_at": "2025-07-11T21:50:14Z",
+    "source": "GitHub",
+    "relevant": false
+  },
+  {
+    "title": "Red Hat adds sidebar color themes in the latest update; no security fixes are included",
+    "body": "Red Hat adds sidebar color themes in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T20:58:14Z",
+    "id": "https://example.com/024cba0a-43ef-4851-9334-0cfa6ef24fc6",
+    "created_at": "2025-07-11T21:00:14Z",
+    "source": "Red Hat",
+    "relevant": false
+  },
+  {
+    "title": "Okta unveils ARM VM at WWDC, promising better performance but no release date",
+    "body": "Okta unveils ARM VM at WWDC, promising better performance but no release date.",
+    "published_at": "2025-07-11T18:23:14Z",
+    "id": "https://example.com/3e412b96-5c27-4d1a-94f6-25f5e9badba1",
+    "created_at": "2025-07-11T18:25:14Z",
+    "source": "Okta",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2025-8736",
+    "body": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2025-8736. NVIDIA urges customers to upgrade.",
+    "published_at": "2025-07-12T02:58:14Z",
+    "id": "https://example.com/380404d4-9534-4558-915c-9e45ddc8d170",
+    "created_at": "2025-07-12T03:00:14Z",
+    "source": "NVIDIA",
+    "relevant": true
+  },
+  {
+    "title": "VMware reports a high\u2011severity outage in global, affecting services Teams, Jira",
+    "body": "VMware reports a high\u2011severity outage in global, affecting services Teams, Jira. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T06:23:14Z",
+    "id": "https://example.com/584d22dc-6986-4da2-a49d-fac4e55834ba",
+    "created_at": "2025-07-12T06:25:14Z",
+    "source": "VMware",
+    "relevant": true
+  },
+  {
+    "title": "NVIDIA reports a high\u2011severity outage in asia-northeast1, affecting services RDS, Cloud Fu",
+    "body": "NVIDIA reports a high\u2011severity outage in asia-northeast1, affecting services RDS, Cloud Functions. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T06:18:14Z",
+    "id": "https://example.com/1e750878-fcdb-4beb-9f59-0cd79b39677a",
+    "created_at": "2025-07-12T06:20:14Z",
+    "source": "NVIDIA",
+    "relevant": true
+  },
+  {
+    "title": "Azure confirms a data breach exposing 169K customer records; incident response is underway",
+    "body": "Azure confirms a data breach exposing 169K customer records; incident response is underway.",
+    "published_at": "2025-07-12T03:23:14Z",
+    "id": "https://example.com/3425d1e5-5345-42dc-981b-814bfb6408f4",
+    "created_at": "2025-07-12T03:25:14Z",
+    "source": "Azure",
+    "relevant": true
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2025-1027",
+    "body": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2025-1027. SonicWall urges customers to upgrade.",
+    "published_at": "2025-07-12T06:33:14Z",
+    "id": "https://example.com/7516deff-dfb3-475d-8939-58fe22eaf052",
+    "created_at": "2025-07-12T06:35:14Z",
+    "source": "SonicWall",
+    "relevant": true
+  },
+  {
+    "title": "Steam adds AI\u2011generated backgrounds in the latest update; no security fixes are included",
+    "body": "Steam adds AI\u2011generated backgrounds in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T20:53:14Z",
+    "id": "https://example.com/2539a128-141a-442b-a6cb-d77193f84316",
+    "created_at": "2025-07-11T20:55:14Z",
+    "source": "Steam",
+    "relevant": false
+  },
+  {
+    "title": "Cisco adds AI\u2011generated backgrounds in the latest update; no security fixes are included",
+    "body": "Cisco adds AI\u2011generated backgrounds in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T18:28:14Z",
+    "id": "https://example.com/a3be236c-b1ab-4579-b96c-7a367fc08ffa",
+    "created_at": "2025-07-11T18:30:14Z",
+    "source": "Cisco",
+    "relevant": false
+  },
+  {
+    "title": "Fortinet is investigating a high\u2011severity vulnerability (CVE-2024-9727) allowing privilege",
+    "body": "Fortinet is investigating a high\u2011severity vulnerability (CVE-2024-9727) allowing privilege escalation. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T08:38:14Z",
+    "id": "https://example.com/c46f9c37-bba1-4add-9cfe-2a244e0fb2dc",
+    "created_at": "2025-07-12T08:40:14Z",
+    "source": "Fortinet",
+    "relevant": true
+  },
+  {
+    "title": "A popular forum thread compares laptop to trackpad, debating aesthetics over functionality",
+    "body": "A popular forum thread compares laptop to trackpad, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T23:08:14Z",
+    "id": "https://example.com/44fd90ce-61a7-4fbb-855f-cc1ddc945c01",
+    "created_at": "2025-07-11T23:10:14Z",
+    "source": "Fortinet",
+    "relevant": false
+  },
+  {
+    "title": "Netflix unveils ARM VM at WWDC, promising better performance but no release date",
+    "body": "Netflix unveils ARM VM at WWDC, promising better performance but no release date.",
+    "published_at": "2025-07-12T00:38:14Z",
+    "id": "https://example.com/1fd8e6b8-cf02-48af-8a83-16bd8cf5e995",
+    "created_at": "2025-07-12T00:40:14Z",
+    "source": "Netflix",
+    "relevant": false
+  },
+  {
+    "title": "TikTok adds sidebar color themes in the latest update; no security fixes are included",
+    "body": "TikTok adds sidebar color themes in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T19:28:14Z",
+    "id": "https://example.com/38378a67-2b60-49c7-bd8a-f9a2cf575f8c",
+    "created_at": "2025-07-11T19:30:14Z",
+    "source": "TikTok",
+    "relevant": false
+  },
+  {
+    "title": "Atlassian is investigating a high\u2011severity vulnerability (CVE-2024-8612) allowing data exf",
+    "body": "Atlassian is investigating a high\u2011severity vulnerability (CVE-2024-8612) allowing data exfiltration. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T05:58:14Z",
+    "id": "https://example.com/5eff3f95-7e85-4f6e-9b79-29038410dcab",
+    "created_at": "2025-07-12T06:00:14Z",
+    "source": "Atlassian",
+    "relevant": true
+  },
+  {
+    "title": "Fortinet unveils foldable phone at Ignite, promising better performance but no release dat",
+    "body": "Fortinet unveils foldable phone at Ignite, promising better performance but no release date.",
+    "published_at": "2025-07-11T21:18:14Z",
+    "id": "https://example.com/275eb255-6be4-4f5b-a2bf-302b5ceabc88",
+    "created_at": "2025-07-11T21:20:14Z",
+    "source": "Fortinet",
+    "relevant": false
+  },
+  {
+    "title": "A popular forum thread compares foldable phone to optical mouse, debating aesthetics over ",
+    "body": "A popular forum thread compares foldable phone to optical mouse, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T19:23:14Z",
+    "id": "https://example.com/f5cd4afd-3b38-4e63-a174-971c69535bb6",
+    "created_at": "2025-07-11T19:25:14Z",
+    "source": "TikTok",
+    "relevant": false
+  },
+  {
+    "title": "SonicWall adds new emoji pack in the latest update; no security fixes are included",
+    "body": "SonicWall adds new emoji pack in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T20:28:14Z",
+    "id": "https://example.com/f7f8c3e8-f14b-4901-8041-7c93ac4020e4",
+    "created_at": "2025-07-11T20:30:14Z",
+    "source": "SonicWall",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting FortiOS, weaponizing CVE-2025-8994",
+    "body": "Researchers discovered a new exploit kit targeting FortiOS, weaponizing CVE-2025-8994. Fortinet urges customers to upgrade.",
+    "published_at": "2025-07-12T02:28:14Z",
+    "id": "https://example.com/68f79b58-fb54-4ca3-b2ef-3a6df013b13c",
+    "created_at": "2025-07-12T02:30:14Z",
+    "source": "Fortinet",
+    "relevant": true
+  },
+  {
+    "title": "Intel's annual conference highlights edge computing trends but announces no new security f",
+    "body": "Intel's annual conference highlights edge computing trends but announces no new security features.",
+    "published_at": "2025-07-11T22:48:14Z",
+    "id": "https://example.com/ab2b165a-d506-4542-a8dd-0fbc4a1b35fd",
+    "created_at": "2025-07-11T22:50:14Z",
+    "source": "Intel",
+    "relevant": false
+  },
+  {
+    "title": "Microsoft adds AI\u2011generated backgrounds in the latest update; no security fixes are includ",
+    "body": "Microsoft adds AI\u2011generated backgrounds in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T19:18:14Z",
+    "id": "https://example.com/ac634991-1519-4109-85b2-7f4ead799122",
+    "created_at": "2025-07-11T19:20:14Z",
+    "source": "Microsoft",
+    "relevant": false
+  },
+  {
+    "title": "Cloudflare's annual conference highlights quantum networking trends but announces no new s",
+    "body": "Cloudflare's annual conference highlights quantum networking trends but announces no new security features.",
+    "published_at": "2025-07-12T00:13:14Z",
+    "id": "https://example.com/cd6f33d4-6f43-4de6-9145-994da6618c61",
+    "created_at": "2025-07-12T00:15:14Z",
+    "source": "Cloudflare",
+    "relevant": false
+  },
+  {
+    "title": "Fortinet adds AI\u2011generated backgrounds in the latest update; no security fixes are include",
+    "body": "Fortinet adds AI\u2011generated backgrounds in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T20:23:14Z",
+    "id": "https://example.com/b73e7964-1b5f-4985-97ff-9c6472025ff4",
+    "created_at": "2025-07-11T20:25:14Z",
+    "source": "Fortinet",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting FortiOS, weaponizing CVE-2025-2527",
+    "body": "Researchers discovered a new exploit kit targeting FortiOS, weaponizing CVE-2025-2527. Zoom urges customers to upgrade.",
+    "published_at": "2025-07-12T03:03:14Z",
+    "id": "https://example.com/6a37a80e-3c8b-4d74-9762-b856e81a1415",
+    "created_at": "2025-07-12T03:05:14Z",
+    "source": "Zoom",
+    "relevant": true
+  },
+  {
+    "title": "Microsoft is investigating a critical vulnerability (CVE-2024-9938) allowing remote code e",
+    "body": "Microsoft is investigating a critical vulnerability (CVE-2024-9938) allowing remote code execution. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T07:08:14Z",
+    "id": "https://example.com/6658c3ea-2158-4322-869a-53a5187a587d",
+    "created_at": "2025-07-12T07:10:14Z",
+    "source": "Microsoft",
+    "relevant": true
+  },
+  {
+    "title": "IBM Cloud reports a high\u2011severity outage in us-west-2, affecting services S3, BigQuery",
+    "body": "IBM Cloud reports a high\u2011severity outage in us-west-2, affecting services S3, BigQuery. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T08:18:14Z",
+    "id": "https://example.com/ac5779dc-5157-48aa-aa38-7c986be1f637",
+    "created_at": "2025-07-12T08:20:14Z",
+    "source": "IBM Cloud",
+    "relevant": true
+  },
+  {
+    "title": "Netflix adds animated stickers in the latest update; no security fixes are included",
+    "body": "Netflix adds animated stickers in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T21:33:14Z",
+    "id": "https://example.com/f78d017d-810f-475f-b8dc-29170c968cad",
+    "created_at": "2025-07-11T21:35:14Z",
+    "source": "Netflix",
+    "relevant": false
+  },
+  {
+    "title": "Okta unveils mechanical keyboard at re:Invent, promising better performance but no release",
+    "body": "Okta unveils mechanical keyboard at re:Invent, promising better performance but no release date.",
+    "published_at": "2025-07-12T01:08:14Z",
+    "id": "https://example.com/0ba2ca5a-97d2-4d08-8cbb-444e6b1113bd",
+    "created_at": "2025-07-12T01:10:14Z",
+    "source": "Okta",
+    "relevant": false
+  },
+  {
+    "title": "Red Hat unveils mechanical keyboard at KubeCon, promising better performance but no releas",
+    "body": "Red Hat unveils mechanical keyboard at KubeCon, promising better performance but no release date.",
+    "published_at": "2025-07-12T01:03:14Z",
+    "id": "https://example.com/bad6baeb-fe3c-49c3-b145-87b2bb91955e",
+    "created_at": "2025-07-12T01:05:14Z",
+    "source": "Red Hat",
+    "relevant": false
+  },
+  {
+    "title": "DigitalOcean adds AI\u2011generated backgrounds in the latest update; no security fixes are inc",
+    "body": "DigitalOcean adds AI\u2011generated backgrounds in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T22:38:14Z",
+    "id": "https://example.com/0e8db945-37bf-4639-88d7-e6cfdde6f5d9",
+    "created_at": "2025-07-11T22:40:14Z",
+    "source": "DigitalOcean",
+    "relevant": false
+  },
+  {
+    "title": "IBM Cloud unveils mechanical keyboard at CES, promising better performance but no release ",
+    "body": "IBM Cloud unveils mechanical keyboard at CES, promising better performance but no release date.",
+    "published_at": "2025-07-11T23:38:14Z",
+    "id": "https://example.com/b9f0a9b2-1d40-45c5-9a0b-0d611b516ac2",
+    "created_at": "2025-07-11T23:40:14Z",
+    "source": "IBM Cloud",
+    "relevant": false
+  },
+  {
+    "title": "A popular forum thread compares laptop to trackpad, debating aesthetics over functionality",
+    "body": "A popular forum thread compares laptop to trackpad, debating aesthetics over functionality.",
+    "published_at": "2025-07-12T01:23:14Z",
+    "id": "https://example.com/0278f330-5991-4c68-a4f2-6f917447e5ca",
+    "created_at": "2025-07-12T01:25:14Z",
+    "source": "Oracle",
+    "relevant": false
+  },
+  {
+    "title": "AWS is investigating a high\u2011severity vulnerability (CVE-2025-1888) allowing privilege esca",
+    "body": "AWS is investigating a high\u2011severity vulnerability (CVE-2025-1888) allowing privilege escalation. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T03:13:14Z",
+    "id": "https://example.com/5f519b66-c8b5-46da-9d19-9b0927007c76",
+    "created_at": "2025-07-12T03:15:14Z",
+    "source": "AWS",
+    "relevant": true
+  },
+  {
+    "title": "Intel adds new emoji pack in the latest update; no security fixes are included",
+    "body": "Intel adds new emoji pack in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T17:18:14Z",
+    "id": "https://example.com/f88df026-2668-4128-9d03-dcbdedbab52c",
+    "created_at": "2025-07-11T17:20:14Z",
+    "source": "Intel",
+    "relevant": false
+  },
+  {
+    "title": "AWS is investigating a major vulnerability (CVE-2025-1035) allowing configuration bypass",
+    "body": "AWS is investigating a major vulnerability (CVE-2025-1035) allowing configuration bypass. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T07:58:14Z",
+    "id": "https://example.com/75399a67-98b2-48cf-9d01-6fe95d33ad87",
+    "created_at": "2025-07-12T08:00:14Z",
+    "source": "AWS",
+    "relevant": true
+  },
+  {
+    "title": "NVIDIA adds AI\u2011generated backgrounds in the latest update; no security fixes are included",
+    "body": "NVIDIA adds AI\u2011generated backgrounds in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T20:48:14Z",
+    "id": "https://example.com/187c1d5d-ea13-4cd6-9dd8-fc37637eb86d",
+    "created_at": "2025-07-11T20:50:14Z",
+    "source": "NVIDIA",
+    "relevant": false
+  },
+  {
+    "title": "VMware is investigating a sev\u20111 vulnerability (CVE-2025-1653) allowing unauthenticated acc",
+    "body": "VMware is investigating a sev\u20111 vulnerability (CVE-2025-1653) allowing unauthenticated access. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T07:03:14Z",
+    "id": "https://example.com/e7225f1b-4faf-438f-9bfe-583d9bd0d524",
+    "created_at": "2025-07-12T07:05:14Z",
+    "source": "VMware",
+    "relevant": true
+  },
+  {
+    "title": "A popular forum thread compares ARM VM to optical mouse, debating aesthetics over function",
+    "body": "A popular forum thread compares ARM VM to optical mouse, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T19:03:14Z",
+    "id": "https://example.com/2541cef5-0442-4c4c-a575-d0f7b21b8995",
+    "created_at": "2025-07-11T19:05:14Z",
+    "source": "Slack",
+    "relevant": false
+  },
+  {
+    "title": "Elastic's annual conference highlights serverless trends but announces no new security fea",
+    "body": "Elastic's annual conference highlights serverless trends but announces no new security features.",
+    "published_at": "2025-07-11T23:53:14Z",
+    "id": "https://example.com/2205e1d8-c8ca-47f7-a1e2-d6ef6f99bdbc",
+    "created_at": "2025-07-11T23:55:14Z",
+    "source": "Elastic",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2025-1359",
+    "body": "Researchers discovered a new exploit kit targeting SSL\u2011VPN, weaponizing CVE-2025-1359. AWS urges customers to upgrade.",
+    "published_at": "2025-07-12T01:58:14Z",
+    "id": "https://example.com/22bef252-e98b-4059-a62a-d618a634901a",
+    "created_at": "2025-07-12T02:00:14Z",
+    "source": "AWS",
+    "relevant": true
+  },
+  {
+    "title": "GitHub unveils ARM VM at re:Invent, promising better performance but no release date",
+    "body": "GitHub unveils ARM VM at re:Invent, promising better performance but no release date.",
+    "published_at": "2025-07-11T21:38:14Z",
+    "id": "https://example.com/0c9d90f1-7b40-47d9-9bde-dcf4349b5c1e",
+    "created_at": "2025-07-11T21:40:14Z",
+    "source": "GitHub",
+    "relevant": false
+  },
+  {
+    "title": "TikTok adds new emoji pack in the latest update; no security fixes are included",
+    "body": "TikTok adds new emoji pack in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T22:03:14Z",
+    "id": "https://example.com/6bf4521a-f51b-41e5-bcf1-75ffdef9ffc7",
+    "created_at": "2025-07-11T22:05:14Z",
+    "source": "TikTok",
+    "relevant": false
+  },
+  {
+    "title": "A popular forum thread compares foldable phone to tenkeyless board, debating aesthetics ov",
+    "body": "A popular forum thread compares foldable phone to tenkeyless board, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T18:13:14Z",
+    "id": "https://example.com/a333ed8a-6ae5-47a0-aa67-fed5eae90745",
+    "created_at": "2025-07-11T18:15:14Z",
+    "source": "Elastic",
+    "relevant": false
+  },
+  {
+    "title": "Okta is investigating a major vulnerability (CVE-2024-3677) allowing configuration bypass",
+    "body": "Okta is investigating a major vulnerability (CVE-2024-3677) allowing configuration bypass. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T09:18:14Z",
+    "id": "https://example.com/ffbf708d-3466-404e-a443-ede2413e80d6",
+    "created_at": "2025-07-12T09:20:14Z",
+    "source": "Okta",
+    "relevant": true
+  },
+  {
+    "title": "IBM Cloud unveils mechanical keyboard at Computex, promising better performance but no rel",
+    "body": "IBM Cloud unveils mechanical keyboard at Computex, promising better performance but no release date.",
+    "published_at": "2025-07-11T23:18:14Z",
+    "id": "https://example.com/c4a4dab6-3f80-40bd-b071-16e2b3cb29dc",
+    "created_at": "2025-07-11T23:20:14Z",
+    "source": "IBM Cloud",
+    "relevant": false
+  },
+  {
+    "title": "IBM Cloud confirms a data breach exposing 125K customer records; incident response is unde",
+    "body": "IBM Cloud confirms a data breach exposing 125K customer records; incident response is underway.",
+    "published_at": "2025-07-12T04:48:14Z",
+    "id": "https://example.com/bef01f65-9807-4908-8031-79c355641741",
+    "created_at": "2025-07-12T04:50:14Z",
+    "source": "IBM Cloud",
+    "relevant": true
+  },
+  {
+    "title": "Azure reports a sev\u20111 outage in us-east-1, affecting services Confluence, RDS",
+    "body": "Azure reports a sev\u20111 outage in us-east-1, affecting services Confluence, RDS. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T06:53:14Z",
+    "id": "https://example.com/2e05dd1e-29fc-4e8d-bc9c-4b6be0ac56f7",
+    "created_at": "2025-07-12T06:55:14Z",
+    "source": "Azure",
+    "relevant": true
+  },
+  {
+    "title": "AWS confirms a data breach exposing 173K customer records; incident response is underway",
+    "body": "AWS confirms a data breach exposing 173K customer records; incident response is underway.",
+    "published_at": "2025-07-12T05:33:14Z",
+    "id": "https://example.com/2cb846d5-fcc0-4b15-90a0-237ab12e56d3",
+    "created_at": "2025-07-12T05:35:14Z",
+    "source": "AWS",
+    "relevant": true
+  },
+  {
+    "title": "Okta is investigating a critical vulnerability (CVE-2025-3143) allowing unauthenticated ac",
+    "body": "Okta is investigating a critical vulnerability (CVE-2025-3143) allowing unauthenticated access. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T07:13:14Z",
+    "id": "https://example.com/f1808e4f-5104-494f-a765-80849e151c11",
+    "created_at": "2025-07-12T07:15:14Z",
+    "source": "Okta",
+    "relevant": true
+  },
+  {
+    "title": "NVIDIA is investigating a critical vulnerability (CVE-2025-7149) allowing configuration by",
+    "body": "NVIDIA is investigating a critical vulnerability (CVE-2025-7149) allowing configuration bypass. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T05:03:14Z",
+    "id": "https://example.com/9a984f71-965d-4e04-b407-9ae99994d4f9",
+    "created_at": "2025-07-12T05:05:14Z",
+    "source": "NVIDIA",
+    "relevant": true
+  },
+  {
+    "title": "Twitter adds new emoji pack in the latest update; no security fixes are included",
+    "body": "Twitter adds new emoji pack in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T22:58:14Z",
+    "id": "https://example.com/9b79200a-6356-4224-8e59-b9fe4224bc1e",
+    "created_at": "2025-07-11T23:00:14Z",
+    "source": "Twitter",
+    "relevant": false
+  },
+  {
+    "title": "Okta confirms a data breach exposing 484K customer records; incident response is underway",
+    "body": "Okta confirms a data breach exposing 484K customer records; incident response is underway.",
+    "published_at": "2025-07-12T02:08:14Z",
+    "id": "https://example.com/7e9508eb-d89e-40d0-a68a-038ebc832623",
+    "created_at": "2025-07-12T02:10:14Z",
+    "source": "Okta",
+    "relevant": true
+  },
+  {
+    "title": "Cisco reports a high\u2011severity outage in global, affecting services RDS, Jira",
+    "body": "Cisco reports a high\u2011severity outage in global, affecting services RDS, Jira. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T06:08:14Z",
+    "id": "https://example.com/ce7cfa95-e7db-4e3c-a4bf-cbd42c60336c",
+    "created_at": "2025-07-12T06:10:14Z",
+    "source": "Cisco",
+    "relevant": true
+  },
+  {
+    "title": "A popular forum thread compares foldable phone to trackpad, debating aesthetics over funct",
+    "body": "A popular forum thread compares foldable phone to trackpad, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T20:13:14Z",
+    "id": "https://example.com/c049de3c-0834-428b-8abb-9eb5ba91d351",
+    "created_at": "2025-07-11T20:15:14Z",
+    "source": "Zoom",
+    "relevant": false
+  },
+  {
+    "title": "Fortinet unveils foldable phone at CES, promising better performance but no release date",
+    "body": "Fortinet unveils foldable phone at CES, promising better performance but no release date.",
+    "published_at": "2025-07-11T18:53:14Z",
+    "id": "https://example.com/7e214a35-9930-4719-94e9-ad8b64532c43",
+    "created_at": "2025-07-11T18:55:14Z",
+    "source": "Fortinet",
+    "relevant": false
+  },
+  {
+    "title": "A popular forum thread compares foldable phone to trackpad, debating aesthetics over funct",
+    "body": "A popular forum thread compares foldable phone to trackpad, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T17:13:14Z",
+    "id": "https://example.com/d5bfc2cc-1415-4c38-8edd-2d26b998b839",
+    "created_at": "2025-07-11T17:15:14Z",
+    "source": "Google Cloud",
+    "relevant": false
+  },
+  {
+    "title": "A popular forum thread compares foldable phone to tenkeyless board, debating aesthetics ov",
+    "body": "A popular forum thread compares foldable phone to tenkeyless board, debating aesthetics over functionality.",
+    "published_at": "2025-07-11T18:38:14Z",
+    "id": "https://example.com/6c3b23ae-4c20-4667-8990-8ca76f91ae2e",
+    "created_at": "2025-07-11T18:40:14Z",
+    "source": "Slack",
+    "relevant": false
+  },
+  {
+    "title": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2025-9308",
+    "body": "Researchers discovered a new exploit kit targeting ASA, weaponizing CVE-2025-9308. Elastic urges customers to upgrade.",
+    "published_at": "2025-07-12T06:28:14Z",
+    "id": "https://example.com/a7173eb6-e7f8-402d-ac49-ce4a1ef31f5a",
+    "created_at": "2025-07-12T06:30:14Z",
+    "source": "Elastic",
+    "relevant": true
+  },
+  {
+    "title": "Atlassian is investigating a sev\u20111 vulnerability (CVE-2024-3870) allowing configuration by",
+    "body": "Atlassian is investigating a sev\u20111 vulnerability (CVE-2024-3870) allowing configuration bypass. A patch is expected within 24 hours.",
+    "published_at": "2025-07-12T03:28:14Z",
+    "id": "https://example.com/1fdeeecd-f819-4211-a0a7-074b27efe80d",
+    "created_at": "2025-07-12T03:30:14Z",
+    "source": "Atlassian",
+    "relevant": true
+  },
+  {
+    "title": "Cisco reports a sev\u20111 outage in asia-northeast1, affecting services Teams, Jira",
+    "body": "Cisco reports a sev\u20111 outage in asia-northeast1, affecting services Teams, Jira. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T03:38:14Z",
+    "id": "https://example.com/38e76bb4-3c3e-4947-9c76-75810c07f38e",
+    "created_at": "2025-07-12T03:40:14Z",
+    "source": "Cisco",
+    "relevant": true
+  },
+  {
+    "title": "AWS unveils foldable phone at re:Invent, promising better performance but no release date",
+    "body": "AWS unveils foldable phone at re:Invent, promising better performance but no release date.",
+    "published_at": "2025-07-11T22:18:14Z",
+    "id": "https://example.com/a6f359e7-09df-483e-a7bf-89509dda1e7c",
+    "created_at": "2025-07-11T22:20:14Z",
+    "source": "AWS",
+    "relevant": false
+  },
+  {
+    "title": "Oracle's annual conference highlights AI governance trends but announces no new security f",
+    "body": "Oracle's annual conference highlights AI governance trends but announces no new security features.",
+    "published_at": "2025-07-11T22:08:14Z",
+    "id": "https://example.com/957d0f6e-f76f-458b-9911-b9f99c762d49",
+    "created_at": "2025-07-11T22:10:14Z",
+    "source": "Oracle",
+    "relevant": false
+  },
+  {
+    "title": "Atlassian reports a critical outage in global, affecting services RDS, BigQuery",
+    "body": "Atlassian reports a critical outage in global, affecting services RDS, BigQuery. Engineers are working on mitigation.",
+    "published_at": "2025-07-12T08:28:14Z",
+    "id": "https://example.com/9981f6f0-7061-4099-92de-632437980f09",
+    "created_at": "2025-07-12T08:30:14Z",
+    "source": "Atlassian",
+    "relevant": true
+  },
+  {
+    "title": "GitHub adds AI\u2011generated backgrounds in the latest update; no security fixes are included",
+    "body": "GitHub adds AI\u2011generated backgrounds in the latest update; no security fixes are included.",
+    "published_at": "2025-07-11T18:43:14Z",
+    "id": "https://example.com/681419d8-7389-47a3-bf8a-108a1ebbfaea",
+    "created_at": "2025-07-11T18:45:14Z",
+    "source": "GitHub",
+    "relevant": false
+  }
+]
